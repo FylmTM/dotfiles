@@ -59,8 +59,10 @@ set nocompatible
             NeoBundleLazy 'vim-scripts/zoomwintab.vim', {'autoload' :{'commands' : 'ZoomWinTabToggle'}}
             " Easily window resizing
             NeoBundle 'jimsei/winresizer'
-            " File explorer (needed where ranger is not available)
-            NeoBundleLazy 'Shougo/vimfiler', {'autoload' : { 'commands' : ['VimFiler']}}
+            " File explorer
+            NeoBundle 'scrooloose/nerdtree'
+            " Fily FuzzySearch
+            NeoBundle 'wincent/Command-T'
         " Colorschemes
             " Dark themes
                 NeoBundle 'joedicastro/vim-molokai256'
@@ -76,8 +78,8 @@ set nocompatible
         " Git
             " Admin Git
             NeoBundle 'tpope/vim-fugitive'
-            " Show git repository changes in the current file
-            NeoBundle 'airblade/vim-gitgutter'
+            " Show git repository changes in the current file [DISABLED]
+            "NeoBundle 'airblade/vim-gitgutter'
             " Git viewer
             NeoBundleLazy 'gregsexton/gitv', {'depends':['tpope/vim-fugitive'], 'autoload':{'commands':'Gitv'}}
             " Browse GitHub events in Vim
@@ -95,8 +97,8 @@ set nocompatible
             NeoBundle "nathanaelkane/vim-indent-guides"
             NeoBundle 'AndrewRadev/switch.vim'
             NeoBundle 'Lokaltog/vim-easymotion'
-            " Autocompletion of (, [, {, ', ", ...
-            NeoBundle 'delimitMate.vim'
+            " Autocompletion of (, [, {, ', ", ... [DISABLED]
+            "NeoBundle 'delimitMate.vim'
             NeoBundle 'terryma/vim-multiple-cursors'
             NeoBundle 'Townk/vim-autoclose'
         " Ruby
@@ -307,33 +309,18 @@ filetype plugin indent on      " Indent and plugins by filetype
 " }}}
 
 " Plugins {{{=========================================================
-    " Use Ranger as a file explorer {{{
-        fun! RangerChooser()
-            exec "silent !ranger --choosefile=/tmp/chosenfile " . expand("%:p:h")
-            if filereadable('/tmp/chosenfile')
-                exec 'edit ' . system('cat /tmp/chosenfile')
-                call system('rm /tmp/chosenfile')
-            endif
-            redraw!
-        endfun
-        map <Leader>x :call RangerChooser()<CR>
-    " }}}
-    " VimFiler {{{
-        nnoremap <silent><Leader>X :VimFiler<CR>
-
-        let g:vimfiler_as_default_explorer = 1
-
-        let g:vimfiler_tree_leaf_icon = '├'
-        let g:vimfiler_tree_opened_icon = '┐'
-        let g:vimfiler_tree_closed_icon = '─'
-        let g:vimfiler_file_icon = '┄'
-        let g:vimfiler_marked_file_icon = '✓'
-        let g:vimfiler_readonly_file_icon = '✗'
-
-        let g:vimfiler_force_overwrite_statusline = 0
-
-        let g:vimfiler_time_format = '%d-%m-%Y %H:%M:%S'
-        let g:vimfiler_data_directory = $HOME.'/.vim/tmp/vimfiler'
+     " NerdTree {{{
+        " Toggle NERDTree
+        map <C-x> :NERDTreeToggle<CR>
+        let NERDTreeShowBookmarks=1
+        let NERDTreeChDirMode=2
+        let NERDTreeQuitOnOpen=1
+        let NERDTreeShowHidden=1
+        let NERDTreeKeepTreeInNewTab=0
+        let NERDTreeMinimalUI=1
+        let NERDTreeDirArrows=1
+        let NERDTreeIgnore=['\.idea$', '\.git$', 'TAGS']
+        let g:NERDTreeWinPos = "right""
     " }}}
     " Run RSPec tests {{{
         map <Leader>tf :call RunCurrentSpecFile()<CR>
@@ -385,6 +372,18 @@ filetype plugin indent on      " Indent and plugins by filetype
     " }}}
     " Delimitmate {{{
         let delimitMate_expand_space = 1
+    " }}}
+    " Command-T {{{
+        map <leader>gr :topleft :split config/routes.rb<cr>
+        map <leader>gg :topleft :split Gemfile<cr>
+        map <leader>ge :topleft :vsplit config/locales/en.yml<cr>
+        map <leader>gv :CommandTFlush<cr>\|:CommandT app/views<cr>
+        map <leader>gc :CommandTFlush<cr>\|:CommandT app/controllers<cr>
+        map <leader>gm :CommandTFlush<cr>\|:CommandT app/models<cr>
+        map <leader>gh :CommandTFlush<cr>\|:CommandT app/helpers<cr>
+        map <leader>gl :CommandTFlush<cr>\|:CommandT lib<cr>
+        map <leader>gs :CommandTFlush<cr>\|:CommandT spec<cr>
+        map <leader>gf :CommandTFlush<cr>\|:CommandT<cr>
     " }}}
     " Fugitive {{{
         nnoremap <Leader>vn :Unite output:echo\ system("git\ init")<CR>
@@ -495,10 +494,8 @@ filetype plugin indent on      " Indent and plugins by filetype
                 \'exe "write !sudo tee % >/dev/null"'],
             \['▷ quick save                                                 ⌘ ,w',
                 \'normal ,w'],
-            \['▷ open ranger                                                ⌘ ,x',
-                \'call RangerChooser()'],
-            \['▷ open vimfiler                                              ⌘ ,X',
-                \'VimFiler'],
+            \['▷ open nerdtree                                              ⌘ ,X',
+                \'NerdTreeToggle'],
             \]
         nnoremap <silent>[menu]o :Unite -silent -winheight=17 -start-insert
                     \ menu:files<CR>
