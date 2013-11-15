@@ -29,3 +29,8 @@ $ mkdir ~/path
 # some other stuff
 $ cd <up> # Type cd in, press up and you cycle in history. In this example "cd /var/www/project"
 ```
+
+# VIM
+Vim configuration file. Inspired by several examples:
+- https://github.com/carlhuda/janus
+- https://github.com/joedicastro/dotfiles/tree/master/vim
