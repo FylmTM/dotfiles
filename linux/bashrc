@@ -1,0 +1,4 @@
+function mount_something {
+    echo "password"  | sshfs user@1.1.1.1:/external_path /local_path -o workaround=rename -o password_stdin
+}
+

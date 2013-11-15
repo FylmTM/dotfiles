@@ -1,0 +1,3 @@
+# Copy to clipboard, from file
+xsel --clipboard < /file_path
+
