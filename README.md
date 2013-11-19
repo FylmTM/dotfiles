@@ -8,9 +8,8 @@ So, i decided to collect useful configurations:
 
 # Linux
 Some configuration files, for linux environment.
-### .bashrc
-### .inputrc
-**Command history searc**: type in some letters, press up and cycle through command, that start with those letters.
+* .bashrc
+* .inputrc
 
 # VIM
 Vim configuration file. Inspired by several examples:
