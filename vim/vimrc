@@ -100,6 +100,8 @@ set nocompatible
             NeoBundle 'terryma/vim-multiple-cursors'
             NeoBundle 'Townk/vim-autoclose'
             NeoBundle 'Valloric/YouCompleteMe'
+            NeoBundle 'kana/vim-textobj-user'
+            NeoBundle 'nelstrom/vim-textobj-rubyblock'
         " Ruby
             NeoBundle 'vim-ruby/vim-ruby'
             NeoBundle 'tpope/vim-rails.git'
@@ -145,6 +147,7 @@ set nocompatible
 " }}}
 
 filetype plugin indent on      " Indent and plugins by filetype
+runtime macros/matchit.vim
 
 " VIM Setup {{{ ===============================================================
     let mapleader=','
