@@ -232,11 +232,11 @@ filetype plugin indent on      " Indent and plugins by filetype
         au VimResized * exe 'normal! \<c-w>='
     " Enable omni completion.
         " Ruby completion
-            autocmd FileType ruby,eruby let g:rubycomplete_buffer_loading = 1
-            autocmd FileType ruby,eruby let g:rubycomplete_rails = 1
-            autocmd FileType ruby,eruby let g:rubycomplete_include_object = 1
-            autocmd FileType ruby,eruby let g:rubycomplete_include_objectspace = 1
-            autocmd FileType ruby,eruby let g:rubycomplete_classes_in_global = 1
+            autocmd FileType ruby let g:rubycomplete_buffer_loading = 1
+            autocmd FileType ruby let g:rubycomplete_rails = 1
+            autocmd FileType ruby let g:rubycomplete_classes_in_global = 1
+            autocmd FileType ruby let g:rubycomplete_include_object = 1
+            autocmd FileType ruby let g:rubycomplete_include_objectspace = 1
         autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS
         autocmd FileType html,markdown setlocal omnifunc=htmlcomplete#CompleteTags
         autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
@@ -379,8 +379,8 @@ filetype plugin indent on      " Indent and plugins by filetype
     " YouCompleteMe {{{
         let g:ycm_complete_in_comments = 1
         let g:ycm_collect_identifiers_from_tags_files = 1
-        "let g:ycm_autoclose_preview_window_after_completion = 1
-        "let g:ycm_autoclose_preview_window_after_insertion = 1
+        let g:ycm_autoclose_preview_window_after_completion = 1
+        let g:ycm_autoclose_preview_window_after_insertion = 1
         let g:ycm_key_list_select_completion = ['<Down>']
         let g:ycm_key_list_previous_completion = ['<Up>']
         let g:ycm_key_invoke_completion = '<C-Space>'
