@@ -85,8 +85,7 @@ set nocompatible
             NeoBundle 'joedicastro/vim-github-dashboard'
         " Editing
             " Snippets
-                NeoBundle "garbas/vim-snipmate"
-                NeoBundle "honza/vim-snippets"
+            NeoBundle "SirVer/ultisnips"
             " To surround vim objects with a pair of identical chars
             NeoBundle 'tpope/vim-surround'
             NeoBundle 'scrooloose/nerdcommenter'
@@ -100,7 +99,9 @@ set nocompatible
             "NeoBundle 'delimitMate.vim'
             NeoBundle 'terryma/vim-multiple-cursors'
             NeoBundle 'Townk/vim-autoclose'
+            NeoBundle 'Valloric/YouCompleteMe'
         " Ruby
+            NeoBundle 'vim-ruby/vim-ruby'
             NeoBundle 'tpope/vim-rails.git'
             NeoBundle 'tpope/vim-bundler'
             NeoBundle 'tpope/vim-rake'
@@ -142,6 +143,7 @@ set nocompatible
     NeoBundleCheck
 
 " }}}
+
 filetype plugin indent on      " Indent and plugins by filetype
 
 " VIM Setup {{{ ===============================================================
@@ -231,13 +233,15 @@ filetype plugin indent on      " Indent and plugins by filetype
     " Enable omni completion.
         " Ruby completion
             autocmd FileType ruby,eruby let g:rubycomplete_buffer_loading = 1
-            autocmd FileType ruby,eruby let g:rubycomplete_classes_in_global = 1
             autocmd FileType ruby,eruby let g:rubycomplete_rails = 1
+            autocmd FileType ruby,eruby let g:rubycomplete_include_object = 1
+            autocmd FileType ruby,eruby let g:rubycomplete_include_objectspace = 1
+            autocmd FileType ruby,eruby let g:rubycomplete_classes_in_global = 1
         autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS
         autocmd FileType html,markdown setlocal omnifunc=htmlcomplete#CompleteTags
         autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
         autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
-        autocmd FileType ruby setlocal omnifunc=rubycomplete#Complete
+        autocmd FileType ruby set omnifunc=rubycomplete#Complete
         autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
 " }}}
 
@@ -305,7 +309,7 @@ filetype plugin indent on      " Indent and plugins by filetype
     " }}}
     " Tags {{{
         " Reload tags
-        map <Leader>rt :!ctags -e --languages=-javascript --exclude=.git --exclude='*.log' -R * `bundle show --paths`<CR><CR>
+        map <Leader>rt :!ctags --fields=+l --languages=-javascript --exclude=.git --exclude='*.log' -R * `bundle show --paths`<CR><CR>
     " }}}
     " Rails {{{
         map <leader>gr :topleft :split config/routes.rb<cr>
@@ -371,6 +375,16 @@ filetype plugin indent on      " Indent and plugins by filetype
         let g:syntastic_warning_symbol='⚠'
         let g:syntastic_style_error_symbol  = '⚡'
         let g:syntastic_style_warning_symbol  = '⚡'
+    " }}}
+    " YouCompleteMe {{{
+        let g:ycm_complete_in_comments = 1
+        let g:ycm_collect_identifiers_from_tags_files = 1
+        "let g:ycm_autoclose_preview_window_after_completion = 1
+        "let g:ycm_autoclose_preview_window_after_insertion = 1
+        let g:ycm_key_list_select_completion = ['<Down>']
+        let g:ycm_key_list_previous_completion = ['<Up>']
+        let g:ycm_key_invoke_completion = '<C-Space>'
+        let g:ycm_cache_omnifunc = 0
     " }}}
     " Indent-guides {{{
         let g:indent_guides_start_level = 2
