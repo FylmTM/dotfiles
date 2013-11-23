@@ -193,7 +193,7 @@ runtime macros/matchit.vim
     " Editor
         autocmd BufRead,BufNewFile *.md setlocal spell
         hi SpellErrors guibg=red guifg=black ctermbg=red ctermfg=black
-        set showtabline=2       " Always show tabs
+        "set showtabline=2       " Always show tabs
         set list                " Display invisible characters
         set listchars=tab:▷⋅,trail:·
         set number              " Set line numbers
@@ -226,11 +226,11 @@ runtime macros/matchit.vim
         else
             colorscheme molokai256
             let g:indent_guides_auto_colors = 0
-            autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  guibg=darkgrey   ctermbg=darkgrey
+            autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  guibg=darkgrey ctermbg=black
             autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=darkgrey ctermbg=black
         endif
         set guifont=Ubuntu\ Mono\ 12
-        let &colorcolumn="80,".join(range(120,999),",")
+        let &colorcolumn=join(range(120,999),",")
     " Resize the divisions if the Vim window size changes
         au VimResized * exe 'normal! \<c-w>='
     " Enable omni completion.
