@@ -98,7 +98,7 @@ set nocompatible
             " Autocompletion of (, [, {, ', ", ... [DISABLED]
             "NeoBundle 'delimitMate.vim'
             NeoBundle 'terryma/vim-multiple-cursors'
-            NeoBundle 'Townk/vim-autoclose'
+            "NeoBundle 'Townk/vim-autoclose'
             NeoBundle 'Valloric/YouCompleteMe'
             NeoBundle 'kana/vim-textobj-user'
             NeoBundle 'nelstrom/vim-textobj-rubyblock'
@@ -154,7 +154,7 @@ runtime macros/matchit.vim
     let maplocalleader= ' '
     "Basic
         set ttimeoutlen=0       " toggle between modes almost instantly
-        set autoread            " automatically read file that has been changed on disk and doesn't have changes in vim
+        "set autoread            " automatically read file that has been changed on disk and doesn't have changes in vim
         set autowriteall        " Automatically save before commands like :next and :make
         set hidden              " enable multiple modified buffers
         set history=1000        " Store a lots of history commands
@@ -207,7 +207,7 @@ runtime macros/matchit.vim
         set autoindent          " Copy indent from current line when starting a new line
         set smartindent         " Do smart indenting when starting a new line
         " File specific
-            autocmd FileType ruby,coffee,haml,sass setlocal expandtab shiftwidth=2 tabstop=2 softtabstop=2
+            autocmd FileType ruby,coffee,haml,sass,yaml setlocal expandtab shiftwidth=2 tabstop=2 softtabstop=2
     " GUI
         set go-=T               " hide the toolbar
         set go-=m               " hide the menu
@@ -322,7 +322,25 @@ runtime macros/matchit.vim
 " }}}
 
 " Plugins {{{=========================================================
-     " NerdTree {{{
+    " Toggle line numbers {{{
+        nnoremap <silent><Leader>l :call ToggleRelativeAbsoluteNumber()<CR>
+        function! ToggleRelativeAbsoluteNumber()
+          if !&number && !&relativenumber
+              set number
+              set norelativenumber
+          elseif &number && !&relativenumber
+              set nonumber
+              set relativenumber
+          elseif !&number && &relativenumber
+              set number
+              set relativenumber
+          elseif &number && &relativenumber
+              set nonumber
+              set norelativenumber
+          endif
+        endfunction
+    " }}}
+    " NerdTree {{{
         " Toggle NERDTree
         map <C-x> :NERDTreeToggle<CR>
         let NERDTreeShowBookmarks=1
@@ -382,12 +400,12 @@ runtime macros/matchit.vim
     " YouCompleteMe {{{
         let g:ycm_complete_in_comments = 1
         let g:ycm_collect_identifiers_from_tags_files = 1
-        let g:ycm_autoclose_preview_window_after_completion = 1
-        let g:ycm_autoclose_preview_window_after_insertion = 1
+        "let g:ycm_autoclose_preview_window_after_completion = 1
+        "let g:ycm_autoclose_preview_window_after_insertion = 1
         let g:ycm_key_list_select_completion = ['<Down>']
         let g:ycm_key_list_previous_completion = ['<Up>']
         let g:ycm_key_invoke_completion = '<C-Space>'
-        let g:ycm_cache_omnifunc = 0
+        let g:ycm_cache_omnifunc = 1
     " }}}
     " Indent-guides {{{
         let g:indent_guides_start_level = 2
