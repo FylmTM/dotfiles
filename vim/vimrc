@@ -102,6 +102,7 @@ set nocompatible
             NeoBundle 'Valloric/YouCompleteMe'
             NeoBundle 'kana/vim-textobj-user'
             NeoBundle 'nelstrom/vim-textobj-rubyblock'
+            NeoBundle 'godlygeek/tabular'
         " Ruby
             NeoBundle 'vim-ruby/vim-ruby'
             NeoBundle 'tpope/vim-rails.git'
@@ -419,6 +420,12 @@ runtime macros/matchit.vim
     " }}}
     " Delimitmate {{{
         let delimitMate_expand_space = 1
+    " }}}
+    " Tabularize {{{
+        nmap <Leader>a= :Tabularize /=<CR>
+        vmap <Leader>a= :Tabularize /=<CR>
+        nmap <Leader>a: :Tabularize /:\zs<CR>
+        vmap <Leader>a: :Tabularize /:\zs<CR>
     " }}}
     " Command-T {{{
         map <leader>gr :topleft :split config/routes.rb<cr>
