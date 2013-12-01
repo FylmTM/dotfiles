@@ -62,6 +62,8 @@ alias gps='git push'
 alias glog='git log --oneline'
 alias ga='git add'
 alias gc='git commit'
+alias gcam='git commit -am'
+alias gcm='git commit -m'
 alias gd='git diff'
 
 # Listing
