@@ -47,7 +47,7 @@ ALERT=${BWhite}${On_Red} # Bold White on red background
 #-------------------------------------------------------------
 # Greetings and promt
 #-------------------------------------------------------------
-PS1="[${On_Blue}\W${NC}]"
+PS1="[${BBlue}\W${NC}]"
 PS1=$PS1'$(__git_ps1 "\[\e[0;32m\](%s)\[\e[0m\]")$ '
 echo -e "${BYellow}${USER}${NC}@${BCyan}${HOSTNAME}${NC}, in ${BBlue}`pwd`${NC}, on ${BPurple}`date '+%A %d-%b-%Y, %H:%M:%S'`${NC}"
 echo -e "${BRed}Dont rush, think twice!${NC}"
@@ -59,15 +59,23 @@ echo -e "${BRed}Dont rush, think twice!${NC}"
 alias gs='git status'
 alias gpl='git pull'
 alias gps='git push'
-alias glog='git log --oneline'
+alias gl='git log --oneline'
 alias ga='git add'
 alias gc='git commit'
 alias gcam='git commit -am'
 alias gcm='git commit -m'
 alias gd='git diff'
+alias gcn='git commit --amend'
 
 # Listing
 alias ll='ls -la'
+
+# Important directories
+alias %='cd ~ && pwd'
+alias %dot='cd ~/dotfiles && pwd'
+alias %www='cd /var/www && pwd'
+alias %work='cd ~/workspace && pwd'
+alias %workr='cd ~/workspace/ruby && pwd'
 
 #-------------------------------------------------------------
 # Functions
