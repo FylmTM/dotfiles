@@ -47,7 +47,8 @@ ALERT=${BWhite}${On_Red} # Bold White on red background
 #-------------------------------------------------------------
 # Greetings and promt
 #-------------------------------------------------------------
-PS1="[${On_Blue}\W${NC}]\$ "
+PS1="[${On_Blue}\W${NC}]"
+PS1=$PS1'$(__git_ps1 "\[\e[0;32m\](%s)\[\e[0m\]")$ '
 echo -e "${BYellow}${USER}${NC}@${BCyan}${HOSTNAME}${NC}, in ${BBlue}`pwd`${NC}, on ${BPurple}`date '+%A %d-%b-%Y, %H:%M:%S'`${NC}"
 echo -e "${BRed}Dont rush, think twice!${NC}"
 
@@ -61,6 +62,7 @@ alias gps='git push'
 alias glog='git log --oneline'
 alias ga='git add'
 alias gc='git commit'
+alias gd='git diff'
 
 # Listing
 alias ll='ls -la'
