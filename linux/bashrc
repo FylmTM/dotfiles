@@ -47,7 +47,7 @@ ALERT=${BWhite}${On_Red} # Bold White on red background
 #-------------------------------------------------------------
 # Greetings and promt
 #-------------------------------------------------------------
-PS1="\[\e]0;\u@\h: \w\a\]${debian_chroot:+($debian_chroot)}[\W]"
+PS1="\[\e]0;\u@\h: \w\a\]${debian_chroot:+($debian_chroot)}[\h@\W]"
 PS1=$PS1'$(__git_ps1 "\[\e[0;32m\](%s)\[\e[0m\]")$ '
 echo -e "${BYellow}${USER}${NC}@${BCyan}${HOSTNAME}${NC}, in ${BBlue}`pwd`${NC}, on ${BPurple}`date '+%A %d-%b-%Y, %H:%M:%S'`${NC}"
 echo -e "${BRed}Dont rush, think twice!${NC}"
