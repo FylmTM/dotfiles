@@ -208,7 +208,7 @@ runtime macros/matchit.vim
         set autoindent          " Copy indent from current line when starting a new line
         set smartindent         " Do smart indenting when starting a new line
         " File specific
-            autocmd FileType ruby,coffee,haml,sass,yaml setlocal expandtab shiftwidth=2 tabstop=2 softtabstop=2
+            autocmd FileType ruby,coffee,haml,sass,yaml,scss setlocal expandtab shiftwidth=2 tabstop=2 softtabstop=2
     " GUI
         set go-=T               " hide the toolbar
         set go-=m               " hide the menu
