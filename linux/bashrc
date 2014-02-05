@@ -59,13 +59,20 @@ alias gcn='git commit --amend'
 
 # Listing
 alias ll='ls -la'
+alias lh='ls -lah'
 
 # Important directories
 alias %='cd ~ && pwd'
 alias %dot='cd ~/dotfiles && pwd'
 alias %www='cd /var/www && pwd'
 alias %work='cd ~/workspace && pwd'
-alias %workr='cd ~/workspace/ruby && pwd'
+
+# Bash promt
+alias e='exit'
+
+# Config files
+alias aw='vim ~/dotfiles/awesome/rc.lua'
+alias bs='vim ~/dotfiles/linux/bashrc'
 
 #-------------------------------------------------------------
 # Functions
