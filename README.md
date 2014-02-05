@@ -12,6 +12,13 @@ Just clone them in home directory.
 $ git clone git@github.com:FylmTM/dotfiles.git ~/dotfiles
 ```
 
+## Awesome
+Tile window manager. 
+
+```
+$ ln -s ~/dotfiles/awesome ~/.config/awesome
+```
+
 ## Linux
 Some configuration files, for linux environment.
 
