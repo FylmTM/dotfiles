@@ -1,11 +1,3 @@
-echo " ____               _      _____    _____";
-echo "|  _ \             | |    |  __ \  / ____|";
-echo "| |_) |  __ _  ___ | |__  | |__) || |";
-echo "|  _ <  / _\` |/ __|| '_ \ |  _  / | |";
-echo "| |_) || (_| |\__ \| | | || | \ \ | |____";
-echo "|____/  \__,_||___/|_| |_||_|  \_\ \_____|";
-echo;
-
 #-------------------------------------------------------------
 # Colors
 #-------------------------------------------------------------
@@ -49,8 +41,6 @@ ALERT=${BWhite}${On_Red} # Bold White on red background
 #-------------------------------------------------------------
 PS1="\[\e]0;\u@\h: \w\a\]${debian_chroot:+($debian_chroot)}[\h@\W]"
 PS1=$PS1'$(__git_ps1 "\[\e[0;32m\](%s)\[\e[0m\]")$ '
-echo -e "${BYellow}${USER}${NC}@${BCyan}${HOSTNAME}${NC}, in ${BBlue}`pwd`${NC}, on ${BPurple}`date '+%A %d-%b-%Y, %H:%M:%S'`${NC}"
-echo -e "${BRed}Dont rush, think twice!${NC}"
 
 #-------------------------------------------------------------
 # Aliases
@@ -106,13 +96,3 @@ function maketar() { tar cvzf "${1%%/}.tar.gz"  "${1%%/}/"; }
 
 # Create a ZIP archive of a file or folder.
 function makezip() { zip -r "${1%%/}.zip" "$1" ; }
-
-
-#-------------------------------------------------------------
-# PHP Functions
-#-------------------------------------------------------------
-
-function pspec() {
-    clear;
-    bin/phpspec run;
-}
