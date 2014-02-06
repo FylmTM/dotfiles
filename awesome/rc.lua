@@ -61,15 +61,27 @@ layouts =
     awful.layout.suit.tile.left,
     awful.layout.suit.tile.bottom,
     awful.layout.suit.tile.top,
+    awful.layout.suit.fair,
+    awful.layout.suit.fair.horizontal,
+    awful.layout.suit.spiral,
+    awful.layout.suit.spiral.dwindle,
+    awful.layout.suit.max,
+    awful.layout.suit.max.fullscreen,
+    awful.layout.suit.magnifier,
+    awful.layout.suit.floating
 }
 -- }}}
 
 -- {{{ Tags
--- Define a tag table which hold all screen tags.
-tags = {}
+-- Define a tag table which will hold all screen tags.
+tags = {
+  names  = { "Code1", "Code2", "Web", "Terminal", "Monitoring", "IM", "Mail", "Media", "Misc" },
+  layout = { layouts[1], layouts[1], layouts[12], layouts[7], layouts[7],
+             layouts[12], layouts[12], layouts[12], layouts[7]
+}}
 for s = 1, screen.count() do
     -- Each screen has its own tag table.
-    tags[s] = awful.tag({ "All", "Code", "Terminal", "Monitoring", "Mail", "Skype", "Media"}, s, layouts[1])
+    tags[s] = awful.tag(tags.names, s, tags.layout)
 end
 -- }}}
 
@@ -92,6 +104,47 @@ mylauncher = awful.widget.launcher({ image = image(beautiful.awesome_icon),
 -- }}}
 
 -- {{{ Wibox
+
+-- Separator widget
+separator = widget({ type = "textbox" })
+separator.text  = "  ·  "
+
+-- CPU Widget
+cpuwidget = awful.widget.graph()
+cpuwidget:set_width(50)
+cpuwidget:set_background_color("#494B4F")
+cpuwidget:set_color("#FF5656")
+cpuwidget:set_gradient_colors({ "#FF5656", "#88A175", "#AECF96" })
+vicious.register(cpuwidget, vicious.widgets.cpu, "$1")
+
+-- Network usage widget
+netwidget = widget({ type = "textbox" })
+vicious.register(netwidget, vicious.widgets.net, '<span color="#CC9393">↓ ${eth0 down_kb} kbps</span>', 3)
+
+-- Clock widget
+datewidget = widget({ type = "textbox" })
+vicious.register(datewidget, vicious.widgets.date, "%d %b %Y, %T", 1)
+
+-- Language layout widget
+kbdcfg = {}
+kbdcfg.cmd = "setxkbmap"
+kbdcfg.layout = { "us", "lv", "ru" }
+kbdcfg.current = 1  -- us is our default layout
+kbdcfg.widget = widget({ type = "textbox", align = "right" })
+kbdcfg.widget.text = " " .. kbdcfg.layout[kbdcfg.current] .. " "
+kbdcfg.switch = function ()
+   kbdcfg.current = kbdcfg.current % #(kbdcfg.layout) + 1
+   local t = " " .. kbdcfg.layout[kbdcfg.current] .. " "
+   kbdcfg.widget.text = t
+   os.execute( kbdcfg.cmd .. t )
+end
+kbdcfg.widget:buttons(awful.util.table.join(
+    awful.button({ }, 1, function () kbdcfg.switch() end)
+))
+kbdcfg.current = kbdcfg.current % #(kbdcfg.layout) + 1
+local layout = kbdcfg.layout[kbdcfg.current]
+kbdcfg.widget.text = " " .. layout .. " "
+os.execute( kbdcfg.cmd .. " " .. layout .. ",us" )
 
 -- Create a textclock widget
 mytextclock = awful.widget.textclock({ align = "right" })
@@ -168,13 +221,16 @@ for s = 1, screen.count() do
     -- Add widgets to the wibox - order matters
     mywibox[s].widgets = {
         {
+            mylayoutbox[s],
             mylauncher,
             mytaglist[s],
             mypromptbox[s],
             layout = awful.widget.layout.horizontal.leftright
         },
-        mylayoutbox[s],
-        mytextclock,
+        datewidget, separator,
+        kbdcfg.widget, separator,
+        cpuwidget.widget,  separator,
+        netwidget, separator,
         s == 1 and mysystray or nil,
         mytasklist[s],
         layout = awful.widget.layout.horizontal.rightleft
@@ -251,6 +307,7 @@ globalkeys = awful.util.table.join(
 )
 
 clientkeys = awful.util.table.join(
+    awful.key({ "Mod1" }, "Shift_L", function () kbdcfg.switch() end),
     awful.key({ modkey,           }, "f",      function (c) c.fullscreen = not c.fullscreen  end),
     awful.key({ modkey, "Shift"   }, "c",      function (c) c:kill()                         end),
     awful.key({ modkey, "Control" }, "space",  awful.client.floating.toggle                     ),
