@@ -281,7 +281,7 @@ runtime macros/matchit.vim
     " }}}
     " Cut/Paste {{{
         " to/from the clipboard
-        map <Leader>y "+y
+        map <Leader>y "*y
         map <Leader>p "+p
         " toggle paste mode
         map <Leader>P :set invpaste<CR>
