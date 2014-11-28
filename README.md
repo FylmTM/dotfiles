@@ -9,14 +9,7 @@ So, I decided to collect useful configurations:
 ## Install
 Just clone them in home directory.
 ```
-$ git clone git@github.com:FylmTM/dotfiles.git ~/dotfiles
-```
-
-## Awesome
-Tile window manager. 
-
-```
-$ ln -s ~/dotfiles/awesome ~/.config/awesome
+$ git clone https://github.com/FylmTM/dotfiles.git ~/.dotfiles
 ```
 
 ## Linux
@@ -24,12 +17,12 @@ Some configuration files, for linux environment.
 
 #### bashrc
 ```
-$ echo "source ~/dotfiles/linux/bashrc" >> ~/.bashrc
+$ echo "source ~/.dotfiles/linux/bashrc" >> ~/.bashrc
 ```
 
 #### inputrc
 ```
-$ ln -s ~/dotfiles/linux/inputrc ~/.inputrc
+$ ln -s ~/.dotfiles/linux/inputrc ~/.inputrc
 ```
 
 ## VIM
@@ -38,23 +31,24 @@ Vim configuration file. Inspired by several examples:
 - https://github.com/carlhuda/janus
 - https://github.com/joedicastro/dotfiles/tree/master/vim
 
-### Setup
-**1. Install latest vim**
+```shell
+$ ln -s ~/.dotfiles/vim/vimrc ~/.vimrc
 ```
+
+### Setup [Ubuntu]
+**1. Install latest vim**
+
+```shell
 $ sudo add-apt-repository ppa:fcwu-tw/ppa
 $ sudo apt-get update
 $ sudo apt-get install vim-nox
 ```
-**2. Link .vimrc**
-```
-$ ln -s ~/dotfiles/vim/vimrc ~/.vimrc
-```
 
-**3. Run vim first time**
+**2. Run vim first time**
 
 Vim will auto install NeoBundle and all plugins.
 
-**4. Setup [YouCompleteMe](https://github.com/Valloric/YouCompleteMe) plugin**
+**3. Setup [YouCompleteMe](https://github.com/Valloric/YouCompleteMe) plugin**
 
 Install dependecies:
 ```
@@ -66,5 +60,4 @@ Compile YMC:
 $ cd ~/.vim/bundle/YouCompleteMe
 $ sudo ./install.sh
 ```
-
 
