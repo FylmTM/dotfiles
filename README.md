@@ -25,6 +25,13 @@ $ echo "source ~/.dotfiles/linux/bashrc" >> ~/.bashrc
 $ ln -s ~/.dotfiles/linux/inputrc ~/.inputrc
 ```
 
+## ZSH
+Install oh-my-zsh. Then Link config.
+
+```shell
+$ ln -s ~/.dotfiles/zsh/zshrc ~/.zshrc
+```
+
 ## VIM
 Vim configuration file. Inspired by several examples:
 
