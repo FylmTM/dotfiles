@@ -94,6 +94,7 @@ set nocompatible
             NeoBundle "nathanaelkane/vim-indent-guides"
             NeoBundle 'AndrewRadev/switch.vim'
             NeoBundle 'Lokaltog/vim-easymotion'
+            NeoBundle 'chase/vim-ansible-yaml'
             " Autocompletion of (, [, {, ', ", ... [DISABLED]
             "NeoBundle 'delimitMate.vim'
             NeoBundle 'terryma/vim-multiple-cursors'
@@ -102,6 +103,7 @@ set nocompatible
             NeoBundle 'kana/vim-textobj-user'
             NeoBundle 'nelstrom/vim-textobj-rubyblock'
             NeoBundle 'godlygeek/tabular'
+            NeoBundle 'mattn/emmet-vim'
         " Ruby
             NeoBundle 'vim-ruby/vim-ruby'
             NeoBundle 'tpope/vim-rails.git'
@@ -136,6 +138,7 @@ set nocompatible
             NeoBundle 'tpope/vim-dispatch'
             " browse the vim undo tree
             NeoBundleLazy 'sjl/gundo.vim', { 'autoload' : {'commands': 'GundoToggle'}}
+            NeoBundle 'zerowidth/vim-copy-as-rtf'
     " First-time plugins installation
     if iCanHazNeoBundle == 0
         echo "Installing Bundles, please ignore key map error messages"
