@@ -138,7 +138,6 @@ set nocompatible
             NeoBundle 'tpope/vim-dispatch'
             " browse the vim undo tree
             NeoBundleLazy 'sjl/gundo.vim', { 'autoload' : {'commands': 'GundoToggle'}}
-            NeoBundle 'zerowidth/vim-copy-as-rtf'
     " First-time plugins installation
     if iCanHazNeoBundle == 0
         echo "Installing Bundles, please ignore key map error messages"
