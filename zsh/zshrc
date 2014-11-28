@@ -59,7 +59,6 @@ KEYTIMEOUT=1
 bindkey -a u undo
 bindkey -a '^R' redo
 set -sg escape-time 1
-bindkey r source-file ~/.tmux.conf \; display-message "Configuration reloaded"
 
 source $ZSH/oh-my-zsh.sh
 

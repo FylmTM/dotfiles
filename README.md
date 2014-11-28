@@ -26,10 +26,17 @@ $ ln -s ~/.dotfiles/linux/inputrc ~/.inputrc
 ```
 
 ## ZSH
-Install oh-my-zsh. Then Link config.
+Install oh-my-zsh. Then link config.
 
 ```shell
 $ ln -s ~/.dotfiles/zsh/zshrc ~/.zshrc
+```
+
+## Tmux
+Install tmux. Then link config.
+
+```shell
+$ ln -s ~/.dotfiles/tmux/tmux.conf ~/.tmux.conf
 ```
 
 ## VIM
