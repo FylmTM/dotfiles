@@ -33,7 +33,8 @@ $ ln -s ~/.dotfiles/zsh/zshrc ~/.zshrc
 ```
 
 ## Tmux
-Install tmux. Then link config.
+Install tmux. Then link config.  
+Install [https://github.com/Lokaltog/powerline](powerline).
 
 ```shell
 $ ln -s ~/.dotfiles/tmux/tmux.conf ~/.tmux.conf
