@@ -41,44 +41,39 @@ COMPLETION_WAITING_DOTS="true"
 # Would you like to use another custom folder than $ZSH/custom?
 # ZSH_CUSTOM=/path/to/new-custom-folder
 
-# Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
-# Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
-# Example format: plugins=(rails git textmate ruby lighthouse)
-# Add wisely, as too many plugins slow down shell startup.
-plugins=(git mvn common-aliases tmux vi-mode)
-
-# tmux
-export TERM=xterm-256color
-[ -n "$TMUX" ] && export TERM=screen-256color
-ZSH_TMUX_AUTOSTART=true
-ZSH_TMUX_FIXTERM=true
-ZSH_TMUX_FIXTERM_WITH_256COLOR=true
-
-# vi-mode
-KEYTIMEOUT=1
-bindkey -a u undo
-bindkey -a '^R' redo
-set -sg escape-time 1
-
-source $ZSH/oh-my-zsh.sh
-
-# User configuration
-
-export PATH=$HOME/bin:/usr/local/bin:$PATH
-# export MANPATH="/usr/local/man:$MANPATH"
-
-# You may need to manually set your language environment
-export LANG=en_US.UTF-8
-
-# Preferred editor for local and remote sessions
-export EDITOR='vim'
-
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
 
 # ssh
 # export SSH_KEY_PATH="~/.ssh/dsa_id"
 
+# You may need to manually set your language environment
+export LANG=en_US.UTF-8
+
+# Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
+# Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
+# Example format: plugins=(rails git textmate ruby lighthouse)
+# Add wisely, as too many plugins slow down shell startup.
+plugins=(git mvn common-aliases tmux zsh-syntax-highlighting zsh-history-substring-search)
+
+# User configuration
+export PATH=$HOME/bin:/usr/local/bin:$PATH
+export TERM=xterm-256color
+export EDITOR='vim'
+
+# tmux configuration
+[ -n "$TMUX" ] && export TERM=screen-256color
+ZSH_TMUX_AUTOSTART=true
+ZSH_TMUX_FIXTERM=true
+ZSH_TMUX_FIXTERM_WITH_256COLOR=true
+
+# Substring search. Bind UP and DOWN arrow keys
+zmodload zsh/terminfo
+bindkey "$terminfo[kcuu1]" history-substring-search-up
+bindkey "$terminfo[kcud1]" history-substring-search-down
+
 # Aliases
 alias e="exit"
 alias clr="clear"
+
+source $ZSH/oh-my-zsh.sh
