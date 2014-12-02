@@ -96,7 +96,7 @@ set nocompatible
             NeoBundle 'Lokaltog/vim-easymotion'
             NeoBundle 'chase/vim-ansible-yaml'
             " Autocompletion of (, [, {, ', ", ... [DISABLED]
-            "NeoBundle 'delimitMate.vim'
+            NeoBundle 'Raimondi/delimitMate'
             NeoBundle 'terryma/vim-multiple-cursors'
             "NeoBundle 'Townk/vim-autoclose'
             NeoBundle 'Valloric/YouCompleteMe'
