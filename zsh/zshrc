@@ -55,7 +55,6 @@ export LANG=en_US.UTF-8
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(git mvn common-aliases tmux zsh-syntax-highlighting zsh-history-substring-search)
-source $ZSH/oh-my-zsh.sh
 
 # User configuration
 export PATH=$HOME/bin:/usr/local/bin:$PATH
@@ -67,6 +66,8 @@ export EDITOR='vim'
 ZSH_TMUX_AUTOSTART=true
 ZSH_TMUX_FIXTERM=true
 ZSH_TMUX_FIXTERM_WITH_256COLOR=true
+
+source $ZSH/oh-my-zsh.sh
 
 # Substring search. Bind UP and DOWN arrow keys
 zmodload zsh/terminfo
@@ -86,12 +87,6 @@ function zle-keymap-select zle-line-init zle-line-finish {
   if (( ${+terminfo[rmkx]} )); then
     printf '%s' ${terminfo[rmkx]}
   fi
-
-  # Set sursor for different modes
-  case $KEYMAP in
-    vicmd) print -n '\e]12;pink\a';; # block cursor
-    viins|main) print -n '\e]12;gray\a';; # less visible cursor
-  esac
 
   zle reset-prompt
   zle -R
