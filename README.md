@@ -74,9 +74,11 @@ Vim will auto install NeoBundle and all plugins.
 
 Install dependecies:
 ```
+# Ubuntu
 $ sudo apt-get install build-essential cmake
 $ sudo apt-get install python-dev
 ```
+
 Compile YMC:
 ```
 $ cd ~/.vim/bundle/YouCompleteMe
