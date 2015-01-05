@@ -104,6 +104,7 @@ set nocompatible
             NeoBundle 'nelstrom/vim-textobj-rubyblock'
             NeoBundle 'godlygeek/tabular'
             NeoBundle 'mattn/emmet-vim'
+            NeoBundle 'tpope/vim-dispatch'
         " Ruby
             NeoBundle 'vim-ruby/vim-ruby'
             NeoBundle 'tpope/vim-rails.git'
@@ -113,6 +114,14 @@ set nocompatible
             NeoBundle 'stefanoverna/vim-i18n'
         " PHP
             NeoBundle 'php.vim'
+        " Clojure
+            NeoBundle 'tpope/vim-classpath'
+            NeoBundle 'paredit.vim'
+            NeoBundle 'amdt/vim-niji'
+            NeoBundle 'tpope/vim-fireplace'
+            NeoBundle 'tpope/vim-leiningen'
+            NeoBundle 'guns/vim-clojure-static'
+            NeoBundle 'guns/vim-clojure-highlight'
         " Syntax support
             NeoBundle 'ap/vim-css-color'
             NeoBundle 'othree/html5.vim'
@@ -127,7 +136,6 @@ set nocompatible
             NeoBundle 'vitaly/vim-syntastic-coffee'
             NeoBundle 'vim-scripts/jade.vim'
             NeoBundle 'wavded/vim-stylus'
-            NeoBundle 'VimClojure'
             NeoBundle 'slim-template/vim-slim'
             NeoBundle 'elixir-lang/vim-elixir'
             NeoBundle 'Keithbsmiley/rspec.vim'
@@ -248,6 +256,8 @@ runtime macros/matchit.vim
         autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
         autocmd FileType ruby set omnifunc=rubycomplete#Complete
         autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
+    " ClojureScript support
+        autocmd BufRead,BufNewFile *.cljs setlocal filetype=clojure
 " }}}
 
 " Scortcuts {{{ ===============================================================
@@ -404,8 +414,8 @@ runtime macros/matchit.vim
         let g:ycm_collect_identifiers_from_tags_files = 1
         "let g:ycm_autoclose_preview_window_after_completion = 1
         "let g:ycm_autoclose_preview_window_after_insertion = 1
-        let g:ycm_key_list_select_completion = ['<Down>']
-        let g:ycm_key_list_previous_completion = ['<Up>']
+        "let g:ycm_key_list_select_completion = ['<Down>']
+        "let g:ycm_key_list_previous_completion = ['<Up>']
         let g:ycm_key_invoke_completion = '<C-Space>'
         let g:ycm_cache_omnifunc = 1
     " }}}
