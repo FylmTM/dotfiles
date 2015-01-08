@@ -258,6 +258,8 @@ runtime macros/matchit.vim
         autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
     " ClojureScript support
         autocmd BufRead,BufNewFile *.cljs setlocal filetype=clojure
+        " ClojureScript repl
+        command! Wiggie :Piggieback (weasel.repl.websocket/repl-env :ip "0.0.0.0" :port 9001)
 " }}}
 
 " Scortcuts {{{ ===============================================================
