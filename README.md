@@ -25,6 +25,36 @@ $ echo "source ~/.dotfiles/linux/bashrc" >> ~/.bashrc
 $ ln -s ~/.dotfiles/linux/inputrc ~/.inputrc
 ```
 
+#### Git
+```
+# Global gitignore
+$ ln -s ~/.dotfiles/linux/gitignore_global
+```
+
+```
+# .gitconfig
+[core]
+    excludesfile = ~/.gitignore
+    autocrlf = input
+[user]
+    email = <email>
+    name = <name>
+[color]
+    ui = true
+# Push current branch
+[push]
+    default = tracking
+# Save credentials via HTTP
+[credential]
+    helper = cache --timeout=28800
+[gui]
+    encoding = utf-8
+[merge]
+    tool = meld
+[alias]
+    showaliases = config --get-regexp alias
+```
+
 ## ZSH
 Install [https://github.com/robbyrussell/oh-my-zsh](oh-my-zsh). 
 
@@ -37,6 +67,8 @@ Install several plugins for oh-my-zsh:
 ```shell
 $ git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting
 $ git clone https://github.com/zsh-users/zsh-history-substring-search.git ~/.oh-my-zsh/custom/plugins/zsh-history-substring-search
+$ git clone https://github.com/rummik/nvm-zsh.git ~/.oh-my-zsh/custom/plugins/nvm-zsh
+$ cd ~/.oh-my-zsh/custom/plugins/nvm-zsh && git submodule update --init
 ```
 
 ## Tmux
@@ -57,42 +89,12 @@ Vim configuration file. Inspired by several examples:
 $ ln -s ~/.dotfiles/vim/vimrc ~/.vimrc
 ```
 
-### Setup [Ubuntu]
-**1. Install latest vim**
+### Setup
 
-```shell
-$ sudo add-apt-repository ppa:fcwu-tw/ppa
-$ sudo apt-get update
-$ sudo apt-get install vim-nox
-```
-
-**2. Run vim first time**
+**1. Run vim first time**
 
 Vim will auto install NeoBundle and all plugins.
 
-**3. Setup [YouCompleteMe](https://github.com/Valloric/YouCompleteMe) plugin**
+**2. Setup [YouCompleteMe](https://github.com/Valloric/YouCompleteMe) plugin**
 
-Install dependecies:
-```
-# Ubuntu
-$ sudo apt-get install build-essential cmake
-$ sudo apt-get install python-dev
-```
-
-Compile YMC:
-```
-$ cd ~/.vim/bundle/YouCompleteMe
-$ sudo ./install.sh
-```
-
-Compile Command-T:
-```shell
-# Ensure that system ruby (against what vim was compiled)
-$ rvm use system
-
-# Compile command-t
-$ cd ~/.vim/bundle/command-t/ruby/command-t
-$ ruby extconf.rb
-$ make
-```
-
+**3. Setup [Command-T](https://github.com/wincent/Command-T) plugin**
