@@ -1,0 +1,9 @@
+source ~/.vimrc
+
+map ,<down> :action VimWindowSplitHorizontal<CR>
+map ,<right> :action VimWindowSplitVertical<CR>
+map ,<left> :action VimWindowSplitVertical<CR>
+map ,<up> :action UnsplitAll<CR>
+map <C-w><left> :action PrevSplitter<CR>
+map <C-w><right> :action NextSplitter<CR>
+

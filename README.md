@@ -98,3 +98,10 @@ Vim will auto install NeoBundle and all plugins.
 **2. Setup [YouCompleteMe](https://github.com/Valloric/YouCompleteMe) plugin**
 
 **3. Setup [Command-T](https://github.com/wincent/Command-T) plugin**
+
+## Intellij IDEA
+
+For IDEA vim-mode plugin:
+```
+ln -s ~/.dotfiles/idea/ideavimrc ~/.ideavimrc
+```
