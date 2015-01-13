@@ -64,6 +64,8 @@ export EDITOR='vim'
 # tmux configuration
 [ -n "$TMUX" ] && export TERM=screen-256color
 ZSH_TMUX_AUTOSTART=true
+ZSH_TMUX_AUTOSTART_ONCE=true
+ZSH_TMUX_AUTOCONNECT=false
 ZSH_TMUX_FIXTERM=true
 ZSH_TMUX_FIXTERM_WITH_256COLOR=true
 
@@ -122,4 +124,5 @@ PS1="$PS1$PS1_MODE "
 # Aliases
 alias e="exit"
 alias clr="clear"
+alias hosts="sudo vim /etc/hosts"
 
