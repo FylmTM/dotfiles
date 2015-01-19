@@ -1,9 +1,16 @@
 source ~/.vimrc
 
-map ,<down> :action VimWindowSplitHorizontal<CR>
-map ,<right> :action VimWindowSplitVertical<CR>
-map ,<left> :action VimWindowSplitVertical<CR>
-map ,<up> :action UnsplitAll<CR>
-map <C-w><left> :action PrevSplitter<CR>
-map <C-w><right> :action NextSplitter<CR>
+set number
 
+map ,wh :action VimWindowSplitHorizontal<CR>
+map ,wv :action VimWindowSplitVertical<CR>
+map ,wx :action VimWindowClose<CR>
+map ,wo :action VimWindowOnly<CR>
+
+map ,h :action VimWindowLeft<CR>
+map ,j :action VimWindowDown<CR>
+map ,k :action VimWindowUp<CR>
+map ,l :action VimWindowRight<CR>
+
+
+"MoveEditorToOppositeTabGroup
