@@ -1,16 +1,23 @@
 source ~/.vimrc
 
-set number
+set relativenumber
 
 map ,wh :action VimWindowSplitHorizontal<CR>
 map ,wv :action VimWindowSplitVertical<CR>
 map ,wx :action VimWindowClose<CR>
-map ,wo :action VimWindowOnly<CR>
+map ,wc :action VimWindowOnly<CR>
+map ,wo :action CloseAllEditorsButActive<CR>
+map ,wu :action UnsplitAll<CR>
 
 map ,h :action VimWindowLeft<CR>
 map ,j :action VimWindowDown<CR>
 map ,k :action VimWindowUp<CR>
 map ,l :action VimWindowRight<CR>
+map ,x :action CloseContent<CR>
+map ,s :action MoveEditorToOppositeTabGroup<CR>
 
+map <S-k> :action VimMotionNextTab<CR>
+map <S-j> :action VimMotionPreviousTab<CR>
 
-"MoveEditorToOppositeTabGroup
+" Run from context
+map ,r :action RunClass<CR>
