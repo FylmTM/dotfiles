@@ -1,6 +1,8 @@
 source ~/.vimrc
 
+" Relative numbers & current line number
 set relativenumber
+set number
 
 map ,wh :action VimWindowSplitHorizontal<CR>
 map ,wv :action VimWindowSplitVertical<CR>
@@ -20,4 +22,5 @@ map <S-k> :action VimMotionNextTab<CR>
 map <S-j> :action VimMotionPreviousTab<CR>
 
 " Run from context
-map ,r :action RunClass<CR>
+map ,r :action DebugClass<CR>
+map ,R :action RunClass<CR>
