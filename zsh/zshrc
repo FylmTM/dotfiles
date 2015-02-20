@@ -125,4 +125,5 @@ PS1="$PS1$PS1_MODE "
 alias e="exit"
 alias clr="clear"
 alias hosts="sudo vim /etc/hosts"
+alias grev="git review"
 
