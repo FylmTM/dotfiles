@@ -293,11 +293,9 @@ runtime macros/matchit.vim
         nnoremap <leader><leader> <c-^>
     " }}}
     " Cut/Paste {{{
-        " to/from the clipboard
-        map <Leader>y "*y
-        map <Leader>p "+p
         " toggle paste mode
         map <Leader>P :set invpaste<CR>
+        set clipboard=unnamed,unnamedplus
     " }}}
     " Spelling {{{
         " turn on the spell checking and set the English language
