@@ -9,6 +9,7 @@ map ,wv :action VimWindowSplitVertical<CR>
 map ,wx :action VimWindowClose<CR>
 map ,wc :action VimWindowOnly<CR>
 map ,wo :action CloseAllEditorsButActive<CR>
+map ,wm :action MoveEditorToOppositeTabGroup<CR>
 map ,wu :action UnsplitAll<CR>
 
 map ,h :action VimWindowLeft<CR>
@@ -16,7 +17,6 @@ map ,j :action VimWindowDown<CR>
 map ,k :action VimWindowUp<CR>
 map ,l :action VimWindowRight<CR>
 map ,x :action CloseContent<CR>
-map ,s :action MoveEditorToOppositeTabGroup<CR>
 
 map <S-k> :action VimMotionNextTab<CR>
 map <S-j> :action VimMotionPreviousTab<CR>
@@ -24,3 +24,6 @@ map <S-j> :action VimMotionPreviousTab<CR>
 " Run from context
 map ,r :action DebugClass<CR>
 map ,R :action RunClass<CR>
+
+map <C-x> :action ActivateProjectToolWindow<CR>
+
