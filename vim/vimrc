@@ -114,6 +114,7 @@ set nocompatible
             NeoBundle 'slim-template/vim-slim'
             NeoBundle 'elixir-lang/vim-elixir'
             NeoBundle 'Keithbsmiley/rspec.vim'
+            NeoBundle 'tfnico/vim-gradle'
         " Support
             " extend repetitions by the 'dot' key
             NeoBundle 'tpope/vim-repeat'

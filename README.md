@@ -94,3 +94,10 @@ For IDEA vim-mode plugin:
 ```
 ln -s ~/.dotfiles/idea/ideavimrc ~/.ideavimrc
 ```
+
+## Tools
+
+* [Guake](https://github.com/Guake/guake)
+* [Autojump](https://github.com/joelthelion/autojump)
+* [HTTPie](https://github.com/jakubroztocil/httpie)
+* [fzf](https://github.com/junegunn/fzf)
