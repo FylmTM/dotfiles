@@ -1,29 +1,60 @@
-source ~/.vimrc
-
-" Relative numbers & current line number
 set relativenumber
 set number
+set scrolloff=3
+set ignorecase smartcase
+set showmode
+set history=1000
 
-map ,wh :action VimWindowSplitHorizontal<CR>
-map ,wv :action VimWindowSplitVertical<CR>
-map ,wx :action VimWindowClose<CR>
-map ,wc :action VimWindowOnly<CR>
-map ,wo :action CloseAllEditorsButActive<CR>
-map ,wm :action MoveEditorToOppositeTabGroup<CR>
-map ,wu :action UnsplitAll<CR>
+" Reload config
+map ,wr :source ~/.ideavimrc<CR>
 
-map ,h :action VimWindowLeft<CR>
-map ,j :action VimWindowDown<CR>
-map ,k :action VimWindowUp<CR>
-map ,l :action VimWindowRight<CR>
-map ,x :action CloseContent<CR>
+" Easy buffer scrolling
+noremap K 5k
+noremap J 5j
 
-map <S-k> :action VimMotionNextTab<CR>
-map <S-j> :action VimMotionPreviousTab<CR>
+" Easy system clipboard copy/paste
+noremap <space>y "*y
+noremap <space>Y "*Y
+noremap <space>p "*p
+noremap <space>P "*P
+
+" Easy window navigation
+nnoremap <c-l> <c-w>l
+nnoremap <c-j> <c-w>j
+nnoremap <c-h> <c-w>h
+nnoremap <c-k> <c-w>k
+nnoremap <a-j> gT
+nnoremap <a-k> gt
+
+" Common operations
+nnoremap <space>q :action CloseContent<CR>
+nnoremap <space>Q :action ReopenClosedTab<cr>
+
+" Window operations
+nnoremap <space>wc :action VimWindowOnly<CR>
+nnoremap <space>wo :action CloseAllEditorsButActive<CR>
+nnoremap <space>wm :action MoveEditorToOppositeTabGroup<CR>
+nnoremap <space>wu :action UnsplitAll<CR>
+nnoremap <space>wv :action MoveTabRight<CR>
+nnoremap <space>wh :action MoveTabDown<CR>
 
 " Run from context
-map ,r :action DebugClass<CR>
-map ,R :action RunClass<CR>
+nnoremap \r :action RunClass<CR>
+nnoremap \d :action DebugClass<CR>
 
-map <C-x> :action ActivateProjectToolWindow<CR>
+" Navigation
+nnoremap <space>gc :action GotoClass<CR>
+nnoremap <space>gs :action GotoSymbol<CR>
+nnoremap <space>ga :action GotoAction<CR>
+nnoremap <space>gf :action GotoFile<CR>
+nnoremap <space>gt :action GotoTest<CR>
+
+" Code
+nnoremap <space>cf :action ReformatCode<CR>
+nnoremap <space>cu :action FindUsages<CR>
+
+" Built in search looks better
+nnoremap / :action Find<cr>
+" But preserve ideavim search
+nnoremap g/ /
 
