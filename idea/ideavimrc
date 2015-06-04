@@ -4,6 +4,7 @@ set scrolloff=3
 set ignorecase smartcase
 set showmode
 set history=1000
+set clipboard=unnamed,unnamedplus
 
 " Reload config
 map ,wr :source ~/.ideavimrc<CR>
@@ -33,9 +34,11 @@ nnoremap <space>Q :action ReopenClosedTab<cr>
 " Window operations
 nnoremap <space>wc :action VimWindowOnly<CR>
 nnoremap <space>wo :action CloseAllEditorsButActive<CR>
+nnoremap <space>wx :action CloseAllEditors<CR>
 nnoremap <space>wm :action MoveEditorToOppositeTabGroup<CR>
 nnoremap <space>wu :action UnsplitAll<CR>
 nnoremap <space>wv :action MoveTabRight<CR>
+nnoremap <space>v :action MoveTabRight<CR>
 nnoremap <space>wh :action MoveTabDown<CR>
 
 " Run from context
