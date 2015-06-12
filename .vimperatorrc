@@ -1,0 +1,23 @@
+let mapleader = '\'
+
+set scroll=4
+set smartcase
+set hlsearch
+set ignorecase
+set incsearch
+set focuscontent
+set gui=addons,bookmarks,nomenu,navigation,tabs
+
+nnoremap j   4<C-e>
+nnoremap k   4<C-y>
+nnoremap J gt
+nnoremap K gT
+nnoremap ZZ <Nop>
+nnoremap <Esc>   <C-c>
+nnoremap <Leader>a :buffer!<Space>
+inoremap <C-n> <Nop>
+noremap p <Nop>
+noremap <C-k> <Nop>
+
+noremap <Leader>b :bmarks<Space>
+noremap <Leader>r :source ~/.vimperatorrc<CR>
