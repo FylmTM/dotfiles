@@ -24,3 +24,12 @@ noremap <C-v> <C-v><C-v>
 
 noremap <Leader>b :bmarks<Space>
 noremap <Leader>r :source ~/.vimperatorrc<CR>
+
+" Remap Russian keyboard in nvo modes
+no й q| no ц w| no у e| no к r| no е t| no н y| no г u| no ш i| no щ o| no з p|
+no х [| no ъ ]| no ф a| no ы s| no в d| no а f| no п g| no р h| no о j| no л k|
+no д l| no ж ;| no э '| no я z| no ч x| no с c| no м v| no и b| no т n| no ь m|
+no б ,| no ю .| no Й Q| no Ц W| no У E| no К R| no Е T| no Н Y| no Г U| no Ш I|
+no Щ O| no З P| no Х {| no Ъ }| no Ф A| no Ы S| no В D| no А F| no П G| no Р H|
+no О J| no Л K| no Д L| no Ж :| no Э "| no Я Z| no Ч X| no С C| no М V| no И B|
+no Т N| no Ь M| no Б <| no Ю >
