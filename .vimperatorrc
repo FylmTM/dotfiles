@@ -18,6 +18,9 @@ nnoremap <Leader>a :buffer!<Space>
 inoremap <C-n> <Nop>
 noremap p <Nop>
 noremap <C-k> <Nop>
+inoremap <C-a> <C-Home><C-S-End>
+noremap <C-c> <C-v><C-c>
+noremap <C-v> <C-v><C-v>
 
 noremap <Leader>b :bmarks<Space>
 noremap <Leader>r :source ~/.vimperatorrc<CR>
