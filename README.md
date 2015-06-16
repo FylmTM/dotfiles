@@ -12,17 +12,28 @@ Just clone them in home directory.
 $ git clone https://github.com/FylmTM/dotfiles.git ~/.dotfiles
 ```
 
+And shortly:
+```
+git config --global core.excludesfile '~/.gitignore_global'
+ln -fs ~/.dotfiles/home/gitignore_global ~/.gitignore_global
+ln -fs ~/.dotfiles/home/zshrc ~/.zshrc
+ln -fs ~/.dotfiles/home/tmux.conf ~/.tmux.conf
+ln -fs ~/.dotfiles/home/vimrc ~/.vimrc
+ln -fs ~/.dotfiles/home/vimrc ~/.nvimrc
+ln -fs ~/.dotfiles/home/ideavimrc ~/.ideavimrc
+```
+
 #### Git
 ```
 # Global gitignore
 git config --global core.excludesfile '~/.gitignore_global'
-ln -s ~/.dotfiles/git/gitignore_global ~/.gitignore_global
+ln -s ~/.dotfiles/home/gitignore_global ~/.gitignore_global
 ```
 
 ```
 # .gitconfig
 [core]
-    excludesfile = ~/.gitignore
+    excludesfile = ~/.gitignore_global
     autocrlf = input
 [user]
     email = <email>
@@ -48,7 +59,7 @@ Install [oh-my-zsh](https://github.com/robbyrussell/oh-my-zsh).
 
 Then link config:
 ```shell
-ln -s ~/.dotfiles/zsh/zshrc ~/.zshrc
+ln -s ~/.dotfiles/home/zshrc ~/.zshrc
 ```
 
 Install several plugins for oh-my-zsh:
@@ -64,7 +75,7 @@ Install tmux.
 
 Then link config:
 ```shell
-ln -s ~/.dotfiles/tmux/tmux.conf ~/.tmux.conf
+ln -s ~/.dotfiles/home/tmux.conf ~/.tmux.conf
 ```
 
 ## VIM
@@ -74,8 +85,8 @@ Vim configuration file. Inspired by several examples:
 - https://github.com/joedicastro/dotfiles/tree/master/vim
 
 ```shell
-ln -s ~/.dotfiles/vim/vimrc ~/.vimrc
-ln -s ~/.dotfiles/vim/vimrc ~/.nvimrc
+ln -s ~/.dotfiles/home/vimrc ~/.vimrc
+ln -s ~/.dotfiles/home/vimrc ~/.nvimrc
 ```
 
 ### Setup
@@ -92,7 +103,7 @@ Vim will auto install NeoBundle and all plugins.
 
 For IDEA vim-mode plugin:
 ```
-ln -s ~/.dotfiles/idea/ideavimrc ~/.ideavimrc
+ln -s ~/.dotfiles/home/ideavimrc ~/.ideavimrc
 ```
 
 ## Tools
