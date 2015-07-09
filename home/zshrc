@@ -73,9 +73,16 @@ plugins=(
     autojump
 )
 
+# system specific configs
+if [[ `uname` == 'Linux' ]]
+then
+    export TERM=xterm-256color
+else
+    export TERM=screen-256color
+fi
+
 # User configuration
 export PATH=$HOME/bin:/usr/local/bin:$PATH
-export TERM=xterm-256color
 export EDITOR='vim'
 
 # tmux configuration
