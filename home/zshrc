@@ -150,6 +150,7 @@ alias e="exit"
 alias clr="clear"
 alias hosts="sudo vim /etc/hosts"
 alias grev="git review"
+alias garev="git add . && git commit -a --amend && git review"
 
 # Fyzzy finder
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
