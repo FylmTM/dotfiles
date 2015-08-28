@@ -68,7 +68,6 @@ plugins=(
     nvm-zsh
     gradle
     nvm
-    rvm
     gradle
     autojump
 )
@@ -163,3 +162,4 @@ fkill() {
     kill -${1:-9} $pid
   fi
 }
+

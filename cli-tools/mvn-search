@@ -1,0 +1,43 @@
+#!/usr/bin/env ruby
+
+require 'httparty'
+require 'terminal-table'
+
+class MavenCentral
+  include HTTParty
+  base_uri 'search.maven.org'
+
+  def initialize(query, rows=20)
+    @options = { query: {rows: rows, wt: 'json', q: query} }
+  end
+
+  def artifacts
+    self.class.get('/solrsearch/select', @options)
+  end
+end
+
+
+if ARGV.empty?
+  puts "Usage: mvn-search <term>"
+else
+  query = ARGV.join ' '
+
+  maven_central = MavenCentral.new(query)
+  response = maven_central.artifacts['response']
+
+  numFound = response['numFound']
+  docs = response['docs']
+
+  table = Terminal::Table.new({
+    title: "Artifacts for '#{query}' (#{numFound} found) ",
+    headings: ['Id', 'Group', 'Version', 'Date']
+  })
+
+  docs.each do |doc|
+    date = DateTime.strptime(doc['timestamp'].to_s,'%Q').strftime("%Y, %-d %b")
+    table << [doc['id'], doc['g'], doc['latestVersion'], date]
+  end
+
+  puts table
+end
+
