@@ -49,3 +49,6 @@ map <C-Right> :action JumpToNextChange<CR>
 nnoremap J 5j
 nnoremap K 5k
 
+" Maven
+
+nnoremap \m :action Maven.ReimportProject<CR>
