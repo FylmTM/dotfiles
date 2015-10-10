@@ -41,19 +41,19 @@ set nocompatible
             " Sidebar with file navigation
             NeoBundle 'scrooloose/nerdtree'
             " Fily FuzzySearch
-            NeoBundle 'wincent/Command-T'
+            "NeoBundle 'wincent/Command-T'
         " Colorschemes
             " Dark themes
                 NeoBundle 'joedicastro/vim-molokai256'
-                NeoBundle 'tomasr/molokai'
-                NeoBundle 'sjl/badwolf'
-                NeoBundle 'nielsmadan/harlequin'
-                NeoBundle 'jpo/vim-railscasts-theme'
-                NeoBundle '29decibel/codeschool-vim-theme'
-                NeoBundle 'vividchalk.vim'
+                "NeoBundle 'tomasr/molokai'
+                "NeoBundle 'sjl/badwolf'
+                "NeoBundle 'nielsmadan/harlequin'
+                "NeoBundle 'jpo/vim-railscasts-theme'
+                "NeoBundle '29decibel/codeschool-vim-theme'
+                "NeoBundle 'vividchalk.vim'
             " Light themes
-                NeoBundle 'vim-scripts/summerfruit256.vim'
-                NeoBundle 'joedicastro/vim-github256'
+                "NeoBundle 'vim-scripts/summerfruit256.vim'
+                "NeoBundle 'joedicastro/vim-github256'
         " Editing
             " Snippets
             NeoBundle "SirVer/ultisnips"
@@ -64,23 +64,23 @@ set nocompatible
             " Syntax checking
             NeoBundle "scrooloose/syntastic"
             NeoBundle "nathanaelkane/vim-indent-guides"
-            NeoBundle 'Lokaltog/vim-easymotion'
+            "NeoBundle 'Lokaltog/vim-easymotion'
             NeoBundle 'chase/vim-ansible-yaml'
             NeoBundle 'Raimondi/delimitMate'
             NeoBundle 'Valloric/YouCompleteMe'
-            NeoBundle 'kana/vim-textobj-user'
-            NeoBundle 'nelstrom/vim-textobj-rubyblock'
+            "NeoBundle 'kana/vim-textobj-user'
+            "NeoBundle 'nelstrom/vim-textobj-rubyblock'
             " Align text
             NeoBundle 'godlygeek/tabular'
-            NeoBundle 'mattn/emmet-vim'
+            "NeoBundle 'mattn/emmet-vim'
         " Ruby
             NeoBundle 'vim-ruby/vim-ruby'
-            NeoBundle 'tpope/vim-rails.git'
-            NeoBundle 'tpope/vim-bundler'
-            NeoBundle 'tpope/vim-rake'
-            NeoBundle 'thoughtbot/vim-rspec'
-            NeoBundle 'stefanoverna/vim-i18n'
-            NeoBundle 'Keithbsmiley/rspec.vim'
+            "NeoBundle 'tpope/vim-rails.git'
+            "NeoBundle 'tpope/vim-bundler'
+            "NeoBundle 'tpope/vim-rake'
+            "NeoBundle 'thoughtbot/vim-rspec'
+            "NeoBundle 'stefanoverna/vim-i18n'
+            "NeoBundle 'Keithbsmiley/rspec.vim'
         " PHP
             NeoBundle 'php.vim'
         " Clojure [DISABLED]
