@@ -52,6 +52,19 @@ ln -s ~/.dotfiles/home/gitignore_global ~/.gitignore_global
     tool = meld
 [alias]
     showaliases = config --get-regexp alias
+[color "branch"]
+    current = yellow reverse
+    local = yellow
+    remote = green
+[color "diff"]
+    meta = yellow bold
+    frag = magenta bold
+    old = red bold
+    new = green bold
+[color "status"]
+    added = yellow
+    changed = green
+    untracked = cyan
 ```
 
 ## ZSH
