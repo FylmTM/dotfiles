@@ -83,6 +83,8 @@ set nocompatible
             "NeoBundle 'Keithbsmiley/rspec.vim'
         " PHP
             NeoBundle 'php.vim'
+        " Golang
+            NeoBundle 'fatih/vim-go'
         " Clojure [DISABLED]
             " NeoBundle 'tpope/vim-classpath'
             " NeoBundle 'paredit.vim'
@@ -234,9 +236,6 @@ runtime macros/matchit.vim
         " FixWhitespaces
         map <F5> :FixWhitespace<CR>
     " }}}
-    " Quick exiting without save {{{
-        nnoremap <Leader>`` :qa!<CR>
-    " }}}
     " Windows {{{
         " Fast windows moves
         nmap <C-h> <C-W>h
@@ -285,15 +284,6 @@ runtime macros/matchit.vim
         nmap g* g*zz
         nmap g# g#zz
     " }}}
-    " Tags {{{
-        " Reload tags
-        map <Leader>rt :!ctags --fields=+l --languages=-javascript --exclude=.git --exclude='*.log' -R * `bundle show --paths`<CR><CR>
-    " }}}
-    " Rails {{{
-        map <leader>gr :topleft :split config/routes.rb<cr>
-        map <leader>gg :topleft :split Gemfile<cr>
-        map <leader>ge :topleft :vsplit config/locales/en.yml<cr>
-    " }}}
 " }}}
 
 " Plugins {{{=========================================================
@@ -328,33 +318,9 @@ runtime macros/matchit.vim
         let NERDTreeIgnore=['\.idea$', '\.git$', 'TAGS']
         let g:NERDTreeWinPos = "right""
     " }}}
-    " Run RSPec tests {{{
-        if has("gui_running")
-            let g:rspec_command = "!rspec --no-color {spec}"
-        else
-            let g:rspec_command = "!rspec {spec}"
-        endif
-        map <Leader>tf :call RunCurrentSpecFile()<CR>
-        map <Leader>tn :call RunNearestSpec()<CR>
-        map <Leader>tl :call RunLastSpec()<CR>
-        map <Leader>ta :call RunAllSpecs()<CR>
-    " }}}
     " Nerd Comment {{{
         nmap <leader>/ :call NERDComment(0, "invert")<cr>
         vmap <leader>/ :call NERDComment(0, "invert")<cr>
-    " }}}
-    " Rails/i18n translate {{{
-        vmap <Leader>z :call I18nTranslateString()<CR>
-    " }}}
-    " Swich {{{
-        map <Leader>w :Switch<CR>
-        autocmd FileType haml let b:switch_definitions =
-            \ [
-            \   g:switch_builtins.ruby_hash_style,
-            \   g:switch_builtins.ruby_string,
-            \   g:switch_builtins.true_false,
-            \   g:switch_builtins.true_false,
-            \ ]
     " }}}
     " Airline {{{
         let g:airline_theme='powerlineish'
@@ -362,6 +328,7 @@ runtime macros/matchit.vim
         " let g:airline_enable_branch=1
         " let g:airline_detect_whitespace = 1
         let g:airline#extensions#hunks#non_zero_only = 1
+        let g:airline_powerline_fonts = 1
     " }}}
     " Synastic {{{
         let g:syntastic_enable_signs=1
@@ -399,19 +366,39 @@ runtime macros/matchit.vim
         vmap <Leader>a: :Tabularize /:\zs<CR>
     " }}}
     " Command-T {{{
-        map <leader>grr :topleft :split config/routes.rb<cr>
-        map <leader>grg :topleft :split Gemfile<cr>
-        map <leader>gre :topleft :vsplit config/locales/en.yml<cr>
-        map <leader>grv :CommandTFlush<cr>\|:CommandT app/views<cr>
-        map <leader>gra :CommandTFlush<cr>\|:CommandT app/assets<cr>
-        map <leader>gri :CommandTFlush<cr>\|:CommandT app/assets/images<cr>
-        map <leader>grj :CommandTFlush<cr>\|:CommandT app/assets/javascripts<cr>
-        map <leader>grs :CommandTFlush<cr>\|:CommandT app/assets/stylesheets<cr>
-        map <leader>grc :CommandTFlush<cr>\|:CommandT app/controllers<cr>
-        map <leader>grm :CommandTFlush<cr>\|:CommandT app/models<cr>
-        map <leader>grh :CommandTFlush<cr>\|:CommandT app/helpers<cr>
-        map <leader>grl :CommandTFlush<cr>\|:CommandT lib<cr>
-        map <leader>grt :CommandTFlush<cr>\|:CommandT spec<cr>
-        map <leader>gf :CommandTFlush<cr>\|:CommandT<cr>
+        map <leader>f :CommandTFlush<cr>\|:CommandT<cr>
+    " }}}
+    " Golang {{{
+        " Execute go code
+        au FileType go nmap \r <Plug>(go-run)
+        au FileType go nmap \b <Plug>(go-build)
+        au FileType go nmap \t <Plug>(go-test)
+        au FileType go nmap \c <Plug>(go-coverage)
+
+        " Go to definition
+        au FileType go nmap \dd <Plug>(go-def)
+        au FileType go nmap \ds <Plug>(go-def-split)
+        au FileType go nmap \dv <Plug>(go-def-vertical)
+
+        " Open documentation
+        au FileType go nmap \gd <Plug>(go-doc)
+        au FileType go nmap \gv <Plug>(go-doc-vertical)
+        au FileType go nmap \gb <Plug>(go-doc-browser)
+
+        " Show a list of interfaces which is implemented by the type under your cursor
+        au FileType go nmap \s <Plug>(go-implements)
+
+        " Rename the identifier under the cursor to a new name
+        au FileType go nmap \e <Plug>(go-rename)
+
+        let g:go_highlight_functions = 1
+        let g:go_highlight_methods = 1
+        let g:go_highlight_structs = 1
+        let g:go_highlight_operators = 1
+        let g:go_highlight_build_constraints = 1
+
+        let g:go_fmt_command = "goimports"
+
+        let g:go_auto_type_info = 1
     " }}}
 " }}}
