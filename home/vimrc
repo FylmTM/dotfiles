@@ -372,7 +372,7 @@ runtime macros/matchit.vim
         " Execute go code
         au FileType go nmap \r <Plug>(go-run)
         au FileType go nmap \b <Plug>(go-build)
-        au FileType go nmap \t <Plug>(go-test)
+        au FileType go nmap \t :GoTest!<cr>
         au FileType go nmap \c <Plug>(go-coverage)
 
         " Go to definition
