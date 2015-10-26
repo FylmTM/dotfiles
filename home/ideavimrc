@@ -30,8 +30,8 @@ nnoremap <space>wo :action CloseAllEditorsButActive<CR>
 nnoremap <space>wq :action CloseAllEditors<CR>
 nnoremap <space>wm :action MoveEditorToOppositeTabGroup<CR>
 nnoremap <space>wu :action UnsplitAll<CR>
-nnoremap <space>h :action MoveTabDown<CR>
-nnoremap <space>v :action MoveTabRight<CR>
+nnoremap <space>h :action SplitHorizontally<CR>
+nnoremap <space>v :action SplitVertically<CR>
 
 " Run from context
 nnoremap \r :action RunClass<CR>
