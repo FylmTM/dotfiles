@@ -1,5 +1,5 @@
-set relativenumber
-set number
+"set relativenumber
+"set number
 set scrolloff=3
 set ignorecase smartcase
 set showmode

@@ -10,6 +10,10 @@ ZSH_THEME="ys"
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
 
+# Uncomment the following line to use hyphen-insensitive completion. Case
+# sensitive completion must be off. _ and - will be interchangeable.
+# HYPHEN_INSENSITIVE="true"
+
 # Uncomment the following line to disable bi-weekly auto-update checks.
 # DISABLE_AUTO_UPDATE="true"
 
@@ -41,15 +45,6 @@ ZSH_THEME="ys"
 # Would you like to use another custom folder than $ZSH/custom?
 # ZSH_CUSTOM=/path/to/new-custom-folder
 
-# Compilation flags
-# export ARCHFLAGS="-arch x86_64"
-
-# ssh
-# export SSH_KEY_PATH="~/.ssh/dsa_id"
-
-# You may need to manually set your language environment
-export LANG=en_US.UTF-8
-
 # No flow control. Ctrl-s hangs terminal otherwise.
 setopt noflowcontrol
 stty -ixon
@@ -59,45 +54,57 @@ stty -ixon
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
-    git
-    mvn
     common-aliases
+    git
     tmux
     zsh-syntax-highlighting
     zsh-history-substring-search
-    nvm-zsh
-    gradle
-    nvm
-    gradle
-    autojump
 )
 
-# system specific configs
-if [[ `uname` == 'Linux' ]]
-then
-    export TERM=xterm-256color
-else
-    export TERM=screen-256color
-fi
-
 # User configuration
-export PATH=$HOME/bin:/usr/local/bin:$PATH
+
+[ -f ~/.environment.sh ] && source ~/.environment.sh
+
+# export PATH="/usr/bin:/bin:/usr/sbin:/sbin:$PATH"
+# export MANPATH="/usr/local/man:$MANPATH"
+
+# Terminal
+export TERM=xterm-256color
 export EDITOR='vim'
 
-# tmux configuration
-#[ -n "$TMUX" ] && export TERM=screen-256color
+[ -n "$TMUX" ] && export TERM=screen-256color
 ZSH_TMUX_AUTOSTART=true
 ZSH_TMUX_AUTOSTART_ONCE=true
-ZSH_TMUX_AUTOCONNECT=false
+ZSH_TMUX_AUTOCONNECT=true
 ZSH_TMUX_FIXTERM=true
 ZSH_TMUX_FIXTERM_WITH_256COLOR=true
 
 source $ZSH/oh-my-zsh.sh
 
-# Substring search. Bind UP and DOWN arrow keys
-zmodload zsh/terminfo
-bindkey "$terminfo[kcuu1]" history-substring-search-up
-bindkey "$terminfo[kcud1]" history-substring-search-down
+# You may need to manually set your language environment
+# export LANG=en_US.UTF-8
+
+# Preferred editor for local and remote sessions
+# if [[ -n $SSH_CONNECTION ]]; then
+#   export EDITOR='vim'
+# else
+#   export EDITOR='mvim'
+# fi
+
+# Compilation flags
+# export ARCHFLAGS="-arch x86_64"
+
+# ssh
+# export SSH_KEY_PATH="~/.ssh/dsa_id"
+
+# Set personal aliases, overriding those provided by oh-my-zsh libs,
+# plugins, and themes. Aliases can be placed here, though oh-my-zsh
+# users are encouraged to define aliases within the ZSH_CUSTOM folder.
+# For a full list of active aliases, run `alias`.
+#
+# Example aliases
+# alias zshconfig="mate ~/.zshrc"
+# alias ohmyzsh="mate ~/.oh-my-zsh"
 
 ##### vi mode
 
@@ -136,31 +143,16 @@ bindkey '^w' backward-kill-word
 autoload -Uz edit-command-line
 bindkey -M vicmd 'v' edit-command-line
 
-# if mode indicator wasn't setup by theme, define default
-#MODE_INDICATOR="%{$fg_bold[blue]%}%{$fg[blue]%}[N]%{$reset_color%}"
-#function vi_mode_prompt_info() {
-#  echo "${${KEYMAP/vicmd/$MODE_INDICATOR}/(main|viins)/[I]}"
-#}
-#PS1_MODE='$(vi_mode_prompt_info)'
-#PS1="$PS1$PS1_MODE "
-
 # Aliases
 alias e="exit"
 alias clr="clear"
 alias hosts="sudo vim /etc/hosts"
 alias grev="git review"
 alias garev="git add . && git commit -a --amend && git review"
-alias vim="nvim"
 
 # Fyzzy finder
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
-fkill() {
-  pid=$(ps -ef | sed 1d | fzf -m | awk '{print $2}')
-
-  if [ "x$pid" != "x" ]
-  then
-    kill -${1:-9} $pid
-  fi
-}
+# Pretty `ls` output
+eval $( dircolors -b ~/.dircolors )
 

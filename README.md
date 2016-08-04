@@ -1,34 +1,24 @@
 # Dotfiles
 
-So, I decided to collect useful configurations:
-
-* Linux environment
-* Development tools (php, rails, ruby)
-* VCS (Git)
-
 ## Install
 Just clone them in home directory.
+
 ```
-$ git clone https://github.com/FylmTM/dotfiles.git ~/.dotfiles
+$ git clone git@github.com:FylmTM/dotfiles.git ~/.dotfiles
 ```
 
-And shortly:
+TL;DR;
+
 ```
 git config --global core.excludesfile '~/.gitignore_global'
 ln -fs ~/.dotfiles/home/gitignore_global ~/.gitignore_global
 ln -fs ~/.dotfiles/home/zshrc ~/.zshrc
 ln -fs ~/.dotfiles/home/tmux.conf ~/.tmux.conf
 ln -fs ~/.dotfiles/home/vimrc ~/.vimrc
-ln -fs ~/.dotfiles/home/vimrc ~/.nvimrc
 ln -fs ~/.dotfiles/home/ideavimrc ~/.ideavimrc
 ```
 
 #### Git
-```
-# Global gitignore
-git config --global core.excludesfile '~/.gitignore_global'
-ln -s ~/.dotfiles/home/gitignore_global ~/.gitignore_global
-```
 
 ```
 # .gitconfig
@@ -68,55 +58,13 @@ ln -s ~/.dotfiles/home/gitignore_global ~/.gitignore_global
 ```
 
 ## ZSH
-Install [oh-my-zsh](https://github.com/robbyrussell/oh-my-zsh). 
 
-Then link config:
-```shell
-ln -s ~/.dotfiles/home/zshrc ~/.zshrc
-```
+Install [oh-my-zsh](https://github.com/robbyrussell/oh-my-zsh). 
 
 Install several plugins for oh-my-zsh:
 ```shell
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting
 git clone https://github.com/zsh-users/zsh-history-substring-search.git ~/.oh-my-zsh/custom/plugins/zsh-history-substring-search
-git clone https://github.com/rummik/nvm-zsh.git ~/.oh-my-zsh/custom/plugins/nvm-zsh
-cd ~/.oh-my-zsh/custom/plugins/nvm-zsh && git submodule update --init
-```
-
-## Tmux
-Install tmux.
-
-Then link config:
-```shell
-ln -s ~/.dotfiles/home/tmux.conf ~/.tmux.conf
-```
-
-## VIM
-Vim configuration file. Inspired by several examples:
-
-- https://github.com/carlhuda/janus
-- https://github.com/joedicastro/dotfiles/tree/master/vim
-
-```shell
-ln -s ~/.dotfiles/home/vimrc ~/.vimrc
-ln -s ~/.dotfiles/home/vimrc ~/.nvimrc
-```
-
-### Setup
-
-**1. Run vim first time**
-
-Vim will auto install NeoBundle and all plugins.
-
-**2. Setup [YouCompleteMe](https://github.com/Valloric/YouCompleteMe) plugin**
-
-**3. Setup [Command-T](https://github.com/wincent/Command-T) plugin**
-
-## Intellij IDEA
-
-For IDEA vim-mode plugin:
-```
-ln -s ~/.dotfiles/home/ideavimrc ~/.ideavimrc
 ```
 
 ## Tools
