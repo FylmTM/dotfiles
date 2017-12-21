@@ -18,6 +18,7 @@ endif
             Plug 'joedicastro/vim-molokai256'
         " Editing
             Plug 'Valloric/YouCompleteMe', {'do': './install.py'}
+            "Plug 'kana/vim-fakeclip'
             Plug 'junegunn/fzf'
             Plug 'junegunn/fzf.vim'
             Plug 'scrooloose/syntastic'
@@ -26,8 +27,6 @@ endif
         " Syntax support
             Plug 'JSON.vim'
             Plug 'tpope/vim-markdown'
-            Plug 'tfnico/vim-gradle'
-            Plug 'chase/vim-ansible-yaml'
     call plug#end()
 " }}}
 
@@ -138,7 +137,7 @@ filetype plugin indent on      " Indent and plugins by filetype
     " Cut/Paste {{{
         " toggle paste mode
         map <Leader>P :set invpaste<CR>
-        set clipboard=unnamed,unnamedplus
+        set clipboard=unnamed
     " }}}
     " Spelling {{{
         " turn on the spell checking and set the English language

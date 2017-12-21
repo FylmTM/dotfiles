@@ -59,6 +59,8 @@ plugins=(
     tmux
     zsh-syntax-highlighting
     zsh-history-substring-search
+    zsh-nvm
+    nvm
 )
 
 # User configuration
@@ -71,6 +73,8 @@ plugins=(
 # Terminal
 export TERM=xterm-256color
 export EDITOR='vim'
+
+export NVM_AUTO_USE=true
 
 [ -n "$TMUX" ] && export TERM=screen-256color
 ZSH_TMUX_AUTOSTART=true
@@ -153,6 +157,9 @@ alias garev="git add . && git commit -a --amend && git review"
 # Fyzzy finder
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
-# Pretty `ls` output
-eval $( dircolors -b ~/.dircolors )
 
+# tabtab source for electron-forge package
+# uninstall by removing these lines or running `tabtab uninstall electron-forge`
+[[ -f /usr/local/lib/node_modules/electron-forge/node_modules/tabtab/.completions/electron-forge.zsh ]] && . /usr/local/lib/node_modules/electron-forge/node_modules/tabtab/.completions/electron-forge.zsh
+
+export MAVEN_OPTS="-Xmx512m"

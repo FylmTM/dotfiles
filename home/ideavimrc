@@ -38,8 +38,10 @@ nnoremap \r :action RunClass<CR>
 nnoremap \d :action DebugClass<CR>
 
 " Code
-nnoremap \f :action ReformatCode<CR>
-nnoremap \u :action FindUsages<CR>
+nnoremap \s :action FileStructurePopup<CR>
+nnoremap \f :action SelectInProjectView<CR>
+nnoremap ,u :action FindUsages<CR>
+nnoremap ,r :action RenameElement<CR>
 
 " Code navigation
 nnoremap [ :action EditorCodeBlockStart<CR>
@@ -50,5 +52,5 @@ nnoremap J 5j
 nnoremap K 5k
 
 " Maven
-
 nnoremap \m :action Maven.ReimportProject<CR>
+
