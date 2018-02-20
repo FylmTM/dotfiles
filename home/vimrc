@@ -11,21 +11,21 @@ endif
 
     " Bundles
         " Interface
-            Plug 'bling/vim-airline'
-            Plug 'vim-airline/vim-airline-themes'
+            Plug 'itchyny/lightline.vim'
             Plug 'scrooloose/nerdtree'
         " Colorschemes
             Plug 'joedicastro/vim-molokai256'
         " Editing
+            if has('unix') && has ('mac')
+                Plug 'kana/vim-fakeclip'
+            endif
             Plug 'Valloric/YouCompleteMe', {'do': './install.py'}
-            "Plug 'kana/vim-fakeclip'
             Plug 'junegunn/fzf'
             Plug 'junegunn/fzf.vim'
             Plug 'scrooloose/syntastic'
             Plug 'scrooloose/nerdcommenter'
             Plug 'bronson/vim-trailing-whitespace'
         " Syntax support
-            Plug 'JSON.vim'
             Plug 'tpope/vim-markdown'
     call plug#end()
 " }}}
@@ -60,6 +60,7 @@ filetype plugin indent on      " Indent and plugins by filetype
         set splitbelow          " Splitting a window will put the new window below the current one
         set splitright          " Splitting a window will put the new window right of the current one
         set backspace=indent,eol,start
+        set noshowmode
     " Wildmenu
         set wildmenu                        " Command line autocompletion
         set wildmode=list:longest,full      " Shows all the options
@@ -137,7 +138,11 @@ filetype plugin indent on      " Indent and plugins by filetype
     " Cut/Paste {{{
         " toggle paste mode
         map <Leader>P :set invpaste<CR>
-        set clipboard=unnamed
+        if has('unix') && has ('mac')
+            set clipboard=unnamed
+        else
+            set clipboard=unnamedplus
+        endif
     " }}}
     " Spelling {{{
         " turn on the spell checking and set the English language
@@ -209,11 +214,6 @@ filetype plugin indent on      " Indent and plugins by filetype
     " Nerd Comment {{{
         nmap <leader>/ :call NERDComment(0, "invert")<cr>
         vmap <leader>/ :call NERDComment(0, "invert")<cr>
-    " }}}
-    " Airline {{{
-        let g:airline_theme='powerlineish'
-        let g:airline#extensions#hunks#non_zero_only = 1
-        let g:airline_powerline_fonts = 1
     " }}}
 " }}}
 

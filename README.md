@@ -64,7 +64,6 @@ Install [oh-my-zsh](https://github.com/robbyrussell/oh-my-zsh).
 Install several plugins for oh-my-zsh:
 ```shell
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting
-git clone https://github.com/zsh-users/zsh-history-substring-search.git ~/.oh-my-zsh/custom/plugins/zsh-history-substring-search
 ```
 
 ## Tools
@@ -73,3 +72,4 @@ git clone https://github.com/zsh-users/zsh-history-substring-search.git ~/.oh-my
 * [Autojump](https://github.com/joelthelion/autojump)
 * [HTTPie](https://github.com/jakubroztocil/httpie)
 * [fzf](https://github.com/junegunn/fzf)
+
