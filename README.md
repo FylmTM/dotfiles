@@ -72,6 +72,8 @@ git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ~/.oh-my-zsh/
   * Drop-down terminal (ala Quake console)
 * [Tmux](https://github.com/tmux/tmux/wiki)
   * tmux is a terminal multiplexer
+* [oh-my-zsh](https://github.com/robbyrussell/oh-my-zsh)
+  * A delightful community-driven (with 1,000+ contributors) framework for managing your zsh configuration
 * [Albert](https://github.com/albertlauncher/albert)
   * A fast and flexible keyboard launcher
 * [fzf](https://github.com/junegunn/fzf)
@@ -79,5 +81,5 @@ git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ~/.oh-my-zsh/
 * [HTTPie](https://github.com/jakubroztocil/httpie)
   * Modern command line HTTP client – user-friendly curl alternative
 * [jq](https://github.com/stedolan/jq)
-  * jq is a lightweight and flexible command-line JSON processor.
+  * jq is a lightweight and flexible command-line JSON processor
 
