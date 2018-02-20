@@ -69,7 +69,15 @@ git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ~/.oh-my-zsh/
 ## Tools
 
 * [Guake](https://github.com/Guake/guake)
-* [Autojump](https://github.com/joelthelion/autojump)
-* [HTTPie](https://github.com/jakubroztocil/httpie)
+  * Drop-down terminal (ala Quake console)
+* [Tmux](https://github.com/tmux/tmux/wiki)
+  * tmux is a terminal multiplexer
+* [Albert](https://github.com/albertlauncher/albert)
+  * A fast and flexible keyboard launcher
 * [fzf](https://github.com/junegunn/fzf)
+  * A command-line fuzzy finder
+* [HTTPie](https://github.com/jakubroztocil/httpie)
+  * Modern command line HTTP client – user-friendly curl alternative
+* [jq](https://github.com/stedolan/jq)
+  * jq is a lightweight and flexible command-line JSON processor.
 

@@ -58,8 +58,6 @@ plugins=(
     git
     tmux
     zsh-syntax-highlighting
-    zsh-nvm
-    nvm
 )
 
 # User configuration
