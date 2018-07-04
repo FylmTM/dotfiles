@@ -13,7 +13,7 @@ TL;DR;
 git config --global core.excludesfile '~/.gitignore_global'
 ln -fs ~/.dotfiles/home/gitignore_global ~/.gitignore_global
 ln -fs ~/.dotfiles/home/zshrc ~/.zshrc
-ln -fs ~/.dotfiles/home/tmux.conf ~/.tmux.conf
+ln -fs ~/.dotfiles/home/tmux.<os>.conf ~/.tmux.conf
 ln -fs ~/.dotfiles/home/vimrc ~/.vimrc
 ln -fs ~/.dotfiles/home/ideavimrc ~/.ideavimrc
 ```
