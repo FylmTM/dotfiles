@@ -78,6 +78,8 @@ ZSH_TMUX_AUTOCONNECT=true
 ZSH_TMUX_FIXTERM=true
 ZSH_TMUX_FIXTERM_WITH_256COLOR=true
 
+[ -f ~/.environment.zsh ] && source ~/.environment.zsh
+
 source $ZSH/oh-my-zsh.sh
 
 # You may need to manually set your language environment
@@ -114,4 +116,3 @@ alias garev="git add . && git commit -a --amend && git review"
 # Fyzzy finder
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
-source ~/.environment
