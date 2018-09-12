@@ -19,19 +19,22 @@ ln -fs ~/.dotfiles/home/ideavimrc ~/.ideavimrc
 [core]
     excludesfile = ~/.gitignore_global
     autocrlf = input
+    safecrlf = true
 [user]
-    email = <email>
-    name = <name>
+    email = dmitry@vrublevsky.me
+    name = Dmitry Vrublevsky
 [color]
     ui = true
 [push]
-    default = tracking
+    default = nothing
 [credential]
     helper = cache --timeout=28800
 [gui]
     encoding = utf-8
 [alias]
     showaliases = config --get-regexp alias
+    review = push origin HEAD:refs/for/master
+    amend = commit --amend --no-edit --date=now
 [color "branch"]
     current = yellow reverse
     local = yellow
@@ -45,6 +48,13 @@ ln -fs ~/.dotfiles/home/ideavimrc ~/.ideavimrc
     added = yellow
     changed = green
     untracked = cyan
+[pager]
+    diff = diff-so-fancy | less --tabs=1,5 -RFX
+    show = diff-so-fancy | less --tabs=1,5 -RFX
+[merge]
+    ff = only
+[pull]
+    ff = only
 ```
 
 ## Software
@@ -64,6 +74,10 @@ ln -fs ~/.dotfiles/home/ideavimrc ~/.ideavimrc
 - Docker Compose
 - HTTPie
 - jq
+- bat
+- htop
+- prettyping
+- tldr
 
 *Development:*
 

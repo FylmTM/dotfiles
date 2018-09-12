@@ -17,10 +17,31 @@ function fish_user_key_bindings
     fzf_key_bindings
 end
 
+# General
 alias e="exit"
 alias clr="clear"
 alias hosts="sudo vim /etc/hosts"
+
+# Git
 alias grev="git review"
 alias garev="git add . ;and git commit -a --amend;and git review"
+alias gp="git push"
+alias gl="git pull"
+alias ga="git add"
+alias gc="git commit"
+alias gst="git status"
+alias gd="git diff"
+
+# Tooling
+alias cat='bat'
+alias ping='prettyping --nolegend'
+alias top='htop'
+alias help='tldr'
+alias ls='exa'
+alias ll='exa --long'
+alias la='exa --long --all'
+alias lst='exa --tree'
+
 # THEME PURE #
 set fish_function_path /home/me/.config/fish/functions/theme-pure $fish_function_path
+
