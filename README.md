@@ -78,6 +78,8 @@ ln -fs ~/.dotfiles/home/ideavimrc ~/.ideavimrc
 - htop
 - prettyping
 - tldr
+- exa
+- pretty-diff
 
 *Development:*
 

@@ -31,6 +31,7 @@ alias ga="git add"
 alias gc="git commit"
 alias gst="git status"
 alias gd="git diff"
+alias gco="git checkout"
 
 # Tooling
 alias cat='bat'
