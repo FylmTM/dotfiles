@@ -16,7 +16,7 @@ endif
         " Colorschemes
             Plug 'joedicastro/vim-molokai256'
         " Editing
-            if has('unix') && has ('mac')
+            if has('unix') || has('mac')
                 Plug 'kana/vim-fakeclip'
             endif
             Plug 'Valloric/YouCompleteMe', {'do': './install.py'}
@@ -27,6 +27,7 @@ endif
             Plug 'bronson/vim-trailing-whitespace'
         " Syntax support
             Plug 'tpope/vim-markdown'
+            Plug 'dag/vim-fish'
     call plug#end()
 " }}}
 
