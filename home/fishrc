@@ -51,6 +51,9 @@ function kubectl-set-context
     kubectl config set-context (kubectl config current-context) --namespace=$argv
 end
 
+# Helpers
+abbr w1="watch -n 1"
+
 # THEME PURE #
 set fish_function_path /home/me/.config/fish/functions/theme-pure $fish_function_path
 
