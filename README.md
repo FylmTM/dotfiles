@@ -57,33 +57,3 @@ ln -fs ~/.dotfiles/home/ideavimrc ~/.ideavimrc
     ff = only
 ```
 
-## Software
-
-*Personal:*
-
-- Chrome
-- Enpass
-
-*Tooling:*
-
-- Guake
-- Fish
-- Tmux
-- FZF
-- Docker
-- Docker Compose
-- HTTPie
-- jq
-- bat
-- htop
-- prettyping
-- tldr
-- exa
-- pretty-diff
-
-*Development:*
-
-- VIM
-- Jetbrains Toolbox
-  - IntelliJ IDEA Ultimate
-
