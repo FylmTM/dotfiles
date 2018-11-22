@@ -32,4 +32,5 @@ ttf-hack
 noto-fonts-emoji
 numix-icon-theme-circle
 xclip
+dos2unix
 ```
