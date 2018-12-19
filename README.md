@@ -10,6 +10,8 @@ ln -fs ~/.dotfiles/home/fishrc ~/.config/fish/config.fish
 ln -fs ~/.dotfiles/home/tmux.<os>.conf ~/.tmux.conf
 ln -fs ~/.dotfiles/home/vimrc ~/.vimrc
 ln -fs ~/.dotfiles/home/ideavimrc ~/.ideavimrc
+ln -fs ~/.dotfiles/sublime/Preferences.sublime-settings ~/.config/sublime-text-3/Packages/User/Preferences.sublime-settings
+ln -fs ~/.dotfiles/sublime/PlainTasks.sublime-settings ~/.config/sublime-text-3/Packages/User/PlainTasks.sublime-settings
 ```
 
 ## Git config
@@ -56,4 +58,8 @@ ln -fs ~/.dotfiles/home/ideavimrc ~/.ideavimrc
 [pull]
     ff = only
 ```
+
+## Sublime Package
+
+* PlainTasks
 
