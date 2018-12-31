@@ -21,8 +21,8 @@ endif
             Plug 'scrooloose/nerdcommenter'
             Plug 'bronson/vim-trailing-whitespace'
         " Syntax support
-            Plug 'tpope/vim-markdown', {'for': 'markdown'}
-            Plug 'dag/vim-fish', {'for': 'fish'}
+            Plug 'tpope/vim-markdown'
+            Plug 'dag/vim-fish'
     call plug#end()
 " }}}
 
