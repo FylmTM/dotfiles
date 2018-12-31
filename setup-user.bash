@@ -35,14 +35,6 @@ function linkUserConfigs() {
     echo "Configuration files linked."
 }
 
-function updateSystemConfigs() {
-    echo "Updating system configs..."
-
-    sudo cp -ufrTv "$DOTFILES/etc/" /etc
-
-    echo "System configs updated."
-}
-
 function installPackages() {
     echo "Install packages..."
 
@@ -53,7 +45,7 @@ function installPackages() {
 }
 
 
-echo "Begin system configuration..."
+echo "Begin user configuration..."
 echo
 
 echo "Enter sudo password..."
@@ -62,11 +54,8 @@ sudo echo "Thanks!"
 linkUserConfigs
 echo
 
-updateSystemConfigs
-echo
-
 installPackages
 echo
 
-echo "System configuration finished."
+echo "User configuration finished."
 

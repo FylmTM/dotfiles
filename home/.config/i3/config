@@ -1,7 +1,7 @@
 # i3 config file (v4)
 
 # Font
-font pango:DejaVu Sans Mono 8
+font pango:Hack Regular 10
 
 # Variables
 set $mod Mod4
