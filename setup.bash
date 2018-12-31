@@ -14,10 +14,20 @@ function linkConfigurationFiles() {
         ln -fs $SOURCE $TARGET
     done
 
+    cd $DOTFILES
+    NAME="Dmitry Vrublevsky"
+    EMAIL="dmitry@vrublevsky.me"
+    if [ -f .name ]; then
+        NAME=$(cat ./.name)
+    fi
+    if [ -f .email ]; then
+        EMAIL=$(cat ./.email)
+    fi
+    cat templates/.gitconfig | sed "s/NAME/$NAME/" | sed "s/EMAIL/$EMAIL/" > $HOME/.gitconfig
+    echo "Configuring ~/.gitconfig with $NAME <$EMAIL>"
+
     echo "Configuration files linked."
 }
-
-
 
 echo "Begin system configuration..."
 echo
