@@ -2,7 +2,7 @@
 
 DOTFILES=$HOME/.dotfiles
 
-function linkConfigurationFiles() {
+function linkUserConfigs() {
     echo "Link configuration files..."
 
     cd $DOTFILES/home
@@ -26,7 +26,21 @@ function linkConfigurationFiles() {
     cat templates/.gitconfig | sed "s/NAME/$NAME/" | sed "s/EMAIL/$EMAIL/" > $HOME/.gitconfig
     echo "Configuring ~/.gitconfig with $NAME <$EMAIL>"
 
+
+    echo "Install pip3 packages"
+    for pipPackage in $(cat ./packages/pip.txt); do
+        sudo pip3 install $pipPackage
+    done
+
     echo "Configuration files linked."
+}
+
+function updateSystemConfigs() {
+    echo "Updating system configs..."
+
+    sudo cp -ufrTv "$DOTFILES/etc/" /etc
+
+    echo "System configs updated."
 }
 
 function installPackages() {
@@ -38,10 +52,17 @@ function installPackages() {
     echo "Packages installed."
 }
 
+
 echo "Begin system configuration..."
 echo
 
-linkConfigurationFiles
+echo "Enter sudo password..."
+sudo echo "Thanks!"
+
+linkUserConfigs
+echo
+
+updateSystemConfigs
 echo
 
 installPackages

@@ -21,3 +21,4 @@ xclip
 dos2unix
 ttf-hack
 noto-fonts-emoji
+nvim

@@ -6,28 +6,23 @@ if empty(glob('~/.vim/autoload/plug.vim'))
   autocmd VimEnter * PlugInstall | source $MYVIMRC
 endif
 
-" NeoBundle auto-installation and setup {{{
+" Plug auto-installation and setup {{{
     call plug#begin()
 
     " Bundles
         " Interface
             Plug 'itchyny/lightline.vim'
-            Plug 'scrooloose/nerdtree'
+            Plug 'scrooloose/nerdtree', {'on': 'NERDTreeToggle'}
         " Colorschemes
             Plug 'joedicastro/vim-molokai256'
         " Editing
-            if has('unix') || has('mac')
-                Plug 'kana/vim-fakeclip'
-            endif
             Plug 'Valloric/YouCompleteMe', {'do': './install.py'}
-            Plug 'junegunn/fzf'
-            Plug 'junegunn/fzf.vim'
             Plug 'scrooloose/syntastic'
             Plug 'scrooloose/nerdcommenter'
             Plug 'bronson/vim-trailing-whitespace'
         " Syntax support
-            Plug 'tpope/vim-markdown'
-            Plug 'dag/vim-fish'
+            Plug 'tpope/vim-markdown', {'for': 'markdown'}
+            Plug 'dag/vim-fish', {'for': 'fish'}
     call plug#end()
 " }}}
 
@@ -194,10 +189,6 @@ filetype plugin indent on      " Indent and plugins by filetype
         let g:ycm_collect_identifiers_from_tags_files = 1
         let g:ycm_key_invoke_completion = '<C-Space>'
         let g:ycm_cache_omnifunc = 1
-    " }}}
-    " FZF {{{
-        map <leader>t :Files<CR>
-        map <leader>b :Buffer<CR>
     " }}}
     " NerdTree {{{
         " Toggle NERDTree

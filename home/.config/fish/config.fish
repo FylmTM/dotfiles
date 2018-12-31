@@ -47,6 +47,7 @@ alias ls='exa'
 alias ll='exa --long'
 alias la='exa --long --all'
 alias lst='exa --tree'
+alias vim='nvim'
 
 # Environment
 export EDITOR=vim
