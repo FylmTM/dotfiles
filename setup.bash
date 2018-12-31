@@ -29,10 +29,22 @@ function linkConfigurationFiles() {
     echo "Configuration files linked."
 }
 
+function installPackages() {
+    echo "Install packages..."
+
+    cd $DOTFILES
+    sudo pacman --noconfirm -S --needed `cat packages/pacman.txt`
+
+    echo "Packages installed."
+}
+
 echo "Begin system configuration..."
 echo
 
 linkConfigurationFiles
+echo
+
+installPackages
 echo
 
 echo "System configuration finished."
