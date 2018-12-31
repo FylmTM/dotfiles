@@ -21,4 +21,8 @@ xclip
 dos2unix
 ttf-hack
 noto-fonts-emoji
-nvim
+neovim
+i3-gaps
+i3lock
+i3status
+dmenu
