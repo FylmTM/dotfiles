@@ -26,6 +26,9 @@ function linkUserConfigs() {
     cat templates/.gitconfig | sed "s/NAME/$NAME/" | sed "s/EMAIL/$EMAIL/" > $HOME/.gitconfig
     echo "Configuring ~/.gitconfig with $NAME <$EMAIL>"
 
+    echo "Copy xfce4 configurations"
+    cp -frTv "${DOTFILES}/xfce4/" $HOME/.config/xfce4
+
     echo "Configuration files linked."
 }
 
