@@ -29,6 +29,9 @@ function linkUserConfigs() {
     echo "Copy xfce4 configurations"
     cp -frTv "${DOTFILES}/xfce4/" $HOME/.config/xfce4
 
+    echo "Configure autostart"
+    sudo cp /usr/share/applications/guake.desktop /etc/xdg/autostart/
+
     echo "Configuration files linked."
 }
 
@@ -48,17 +51,16 @@ function installPackages() {
     echo "Packages installed."
 }
 
-
 echo "Begin user configuration..."
 echo
 
 echo "Enter sudo password..."
 sudo echo "Thanks!"
 
-linkUserConfigs
+installPackages
 echo
 
-installPackages
+linkUserConfigs
 echo
 
 echo "User configuration finished."
