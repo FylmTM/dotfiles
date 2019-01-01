@@ -7,6 +7,8 @@ function updateSystemConfigs() {
 
     echo "Generate locales"
     sudo sed -i '/#en_US.UTF-8 UTF-8/s/^# *//' /etc/locale.gen
+    sudo sed -i '/#en_DK.UTF-8 UTF-8/s/^# *//' /etc/locale.gen
+
     sudo locale-gen
 
     echo "Copy configs..."

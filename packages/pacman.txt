@@ -22,8 +22,4 @@ dos2unix
 ttf-hack
 noto-fonts-emoji
 neovim
-i3-gaps
-i3lock
-i3status
-dmenu
 ibus-typing-booster

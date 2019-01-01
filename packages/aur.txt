@@ -7,3 +7,4 @@ slack-desktop
 google-chrome
 font-manager
 enpass-bin
+xfce4-i3-workspaces-plugin-git
