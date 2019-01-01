@@ -1,0 +1,35 @@
+[general]
+prompt-on-quit=true
+window-height=94
+mouse-display=true
+window-width=99
+max-tab-name-length=100
+window-losefocus=false
+gtk-prefer-dark-theme=true
+history-size=1000
+open-tab-cwd=true
+window-tabbar=false
+window-halignment=0
+quick-open-command-line='gedit %(file_path)s'
+compat-delete='delete-sequence'
+default-shell='/usr/bin/fish'
+abbreviate-tab-names=false
+display-n=0
+scroll-keystroke=true
+use-default-font=false
+use-trayicon=true
+use-scrollbar=true
+window-refocus=false
+use-popup=true
+
+[keybindings/global]
+show-hide='<Primary>grave'
+
+[style/background]
+transparency=96
+
+[style/font]
+allow-bold=true
+style='Hack 13'
+palette='#000000000000:#cdcb00000000:#0000cdcb0000:#cdcbcdcb0000:#1e1a908fffff:#cdcb0000cdcb:#0000cdcbcdcb:#e5e2e5e2e5e2:#4ccc4ccc4ccc:#ffff00000000:#0000ffff0000:#ffffffff0000:#46458281b4ae:#ffff0000ffff:#0000ffffffff:#ffffffffffff:#ffffffffffff:#000000000000'
+palette-name='Xterm'
