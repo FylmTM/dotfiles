@@ -26,20 +26,21 @@ function linkUserConfigs() {
     cat templates/.gitconfig | sed "s/NAME/$NAME/" | sed "s/EMAIL/$EMAIL/" > $HOME/.gitconfig
     echo "Configuring ~/.gitconfig with $NAME <$EMAIL>"
 
-
-    echo "Install pip3 packages"
-    for pipPackage in $(cat ./packages/pip.txt); do
-        sudo pip3 install $pipPackage
-    done
-
     echo "Configuration files linked."
 }
 
 function installPackages() {
     echo "Install packages..."
 
+    echo "Install pacman packages"
     cd $DOTFILES
     sudo pacman --noconfirm -S --needed `cat packages/pacman.txt`
+
+    echo "Install pip3 packages"
+    for pipPackage in $(cat ./packages/pip.txt); do
+        sudo pip3 install $pipPackage
+    done
+
 
     echo "Packages installed."
 }
