@@ -31,8 +31,8 @@
       <property name="override" type="bool" value="true"/>
       <property name="&lt;Primary&gt;&lt;Alt&gt;x" type="string" value="xkill"/>
       <property name="&lt;Primary&gt;&lt;Alt&gt;t" type="string" value="xfce4-terminal"/>
-      <property name="&lt;Super&gt;space" type="string" value="xfce4-popup-whiskermenu --pointer"/>
       <property name="Print" type="string" value="deepin-screenshot -i"/>
+      <property name="&lt;Super&gt;space" type="string" value="albert toggle"/>
     </property>
   </property>
   <property name="xfwm4" type="empty">

@@ -31,6 +31,7 @@ function linkUserConfigs() {
 
     echo "Configure autostart"
     sudo cp /usr/share/applications/guake.desktop /etc/xdg/autostart/
+    sudo cp /usr/share/applications/albert.desktop /etc/xdg/autostart/
 
     echo "Configure Guake"
     dconf reset -f /apps/guake/

@@ -28,3 +28,5 @@ deepin-screenshot
 lightdm-gtk-greeter
 lightdm-gtk-greeter-settings
 words
+albert
+muparser
