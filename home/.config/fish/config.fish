@@ -50,7 +50,7 @@ alias lst='exa --tree'
 alias vim='nvim'
 
 # Environment
-export EDITOR=vim
+export EDITOR=nvim
 
 # Kubernetes
 function kubectl-set-context
