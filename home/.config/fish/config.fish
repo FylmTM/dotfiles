@@ -75,15 +75,9 @@ alias w1 'watch -n 1'
 set -l fish_root $HOME/.config/fish
 set -l pure_root $fish_root/fundle/rafaelrinaldi/pure
 
-if ! test -e $fish_root/functions/fish_prompt.fish
-    if test -e $pure_root/fish_prompt.fish
-        ln -s $pure_root/fish_prompt.fish $fish_root/functions/fish_prompt.fish
-    end
+if test ! -e $fish_root/functions/fish_prompt.fish -a -e $pure_root/fish_prompt.fish
+    ln -s $pure_root/fish_prompt.fish $fish_root/functions/fish_prompt.fish
 end
 
-if test -e $pure_root/conf.d/pure.fish
-    source $HOME/.config/fish/fundle/rafaelrinaldi/pure/conf.d/pure.fish
-    _pure_set_default pure_separate_prompt_on_error true
-    _pure_set_default pure_command_max_exec_time 3
-end
+set pure_command_max_exec_time 3
 
