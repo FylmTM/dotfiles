@@ -23,19 +23,19 @@ alias clr='clear'
 alias hosts='sudo vim /etc/hosts'
 
 # Git
-abbr grev='git review'
-abbr garev='git add . ;and git commit -a --amend;and git review'
-abbr gp='git push'
-abbr gl='git pull'
-abbr ga='git add'
-abbr gc='git commit'
-abbr gca='git commit --amend'
-abbr gst='git status'
-abbr gd='git diff'
-abbr gco='git checkout'
-abbr gb='git branch'
-abbr glg='git log --stat'
-abbr glog='git log --oneline --decorate --graph'
+abbr grev 'git review'
+abbr garev 'git add . ;and git commit -a --amend;and git review'
+abbr gp 'git push'
+abbr gl 'git pull'
+abbr ga 'git add'
+abbr gc 'git commit'
+abbr gca 'git commit --amend'
+abbr gst 'git status'
+abbr gd 'git diff'
+abbr gco 'git checkout'
+abbr gb 'git branch'
+abbr glg 'git log --stat'
+abbr glog 'git log --oneline --decorate --graph'
 alias gwip='git add -A; git rm (git ls-files --deleted) 2> /dev/null; git commit --no-verify -m "--wip-- [skip ci]"'
 alias gunwip='git log -n 1 | grep -q -c "\-\-wip\-\-"; and git reset HEAD~1'
 
@@ -51,6 +51,7 @@ alias vim='nvim'
 
 # Environment
 export EDITOR=nvim
+export BROWSER=google-chrome-stable
 
 # Kubernetes
 function kubectl-set-context
@@ -68,8 +69,21 @@ function docker-stop-all --description 'Stop and remove all Docker container'
 end
 
 # Helpers
-abbr w1='watch -n 1'
+alias w1 'watch -n 1'
 
-# THEME PURE #
-set fish_function_path /home/me/.config/fish/functions/theme-pure $fish_function_path
+# Theme
+set -l fish_root $HOME/.config/fish
+set -l pure_root $fish_root/fundle/rafaelrinaldi/pure
+
+if ! test -e $fish_root/functions/fish_prompt.fish
+    if test -e $pure_root/fish_prompt.fish
+        ln -s $pure_root/fish_prompt.fish $fish_root/functions/fish_prompt.fish
+    end
+end
+
+if test -e $pure_root/conf.d/pure.fish
+    source $HOME/.config/fish/fundle/rafaelrinaldi/pure/conf.d/pure.fish
+    _pure_set_default pure_separate_prompt_on_error true
+    _pure_set_default pure_command_max_exec_time 3
+end
 
