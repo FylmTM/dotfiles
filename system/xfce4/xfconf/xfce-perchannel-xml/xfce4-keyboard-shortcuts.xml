@@ -33,6 +33,8 @@
       <property name="&lt;Primary&gt;&lt;Alt&gt;t" type="string" value="xfce4-terminal"/>
       <property name="Print" type="string" value="deepin-screenshot -i"/>
       <property name="&lt;Super&gt;space" type="string" value="albert toggle"/>
+      <property name="&lt;Super&gt;w" type="string" value="google-chrome-stable"/>
+      <property name="&lt;Super&gt;t" type="string" value="subl3 ~/TODO"/>
     </property>
   </property>
   <property name="xfwm4" type="empty">
@@ -122,14 +124,11 @@
       <property name="&lt;Control&gt;F12" type="empty"/>
     </property>
     <property name="custom" type="empty">
-      <property name="&lt;Control&gt;&lt;Alt&gt;Up" type="string" value="up_workspace_key"/>
       <property name="Escape" type="string" value="cancel_key"/>
       <property name="&lt;Alt&gt;&lt;Shift&gt;Tab" type="string" value="cycle_reverse_windows_key"/>
       <property name="&lt;Alt&gt;space" type="string" value="popup_menu_key"/>
-      <property name="&lt;Alt&gt;F4" type="string" value="close_window_key"/>
       <property name="&lt;Shift&gt;&lt;Alt&gt;Page_Down" type="string" value="lower_window_key"/>
       <property name="&lt;Control&gt;&lt;Shift&gt;&lt;Alt&gt;Up" type="string" value="move_window_up_key"/>
-      <property name="&lt;Control&gt;&lt;Alt&gt;Down" type="string" value="down_workspace_key"/>
       <property name="&lt;Control&gt;&lt;Shift&gt;&lt;Alt&gt;Left" type="string" value="move_window_left_key"/>
       <property name="Left" type="string" value="left_key"/>
       <property name="Down" type="string" value="down_key"/>
@@ -147,6 +146,9 @@
       <property name="&lt;Primary&gt;&lt;Super&gt;Right" type="string" value="right_workspace_key"/>
       <property name="&lt;Primary&gt;&lt;Shift&gt;&lt;Super&gt;Left" type="string" value="move_window_left_workspace_key"/>
       <property name="&lt;Primary&gt;&lt;Shift&gt;&lt;Super&gt;Right" type="string" value="move_window_right_workspace_key"/>
+      <property name="&lt;Primary&gt;&lt;Super&gt;Up" type="string" value="up_workspace_key"/>
+      <property name="&lt;Primary&gt;&lt;Super&gt;Down" type="string" value="down_workspace_key"/>
+      <property name="&lt;Super&gt;q" type="string" value="close_window_key"/>
     </property>
   </property>
   <property name="providers" type="array">

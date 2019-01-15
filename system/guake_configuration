@@ -22,14 +22,49 @@ use-scrollbar=false
 window-refocus=false
 use-popup=true
 
+[keybindings/local]
+rename-current-tab='disabled'
+focus-terminal-down='disabled'
+focus-terminal-up='disabled'
+toggle-transparency='disabled'
+switch-tab1='disabled'
+switch-tab2='disabled'
+move-tab-left='disabled'
+switch-tab3='disabled'
+switch-tab5='disabled'
+switch-tab6='disabled'
+search-on-web='disabled'
+switch-tab7='disabled'
+switch-tab9='disabled'
+toggle-fullscreen='disabled'
+switch-tab8='disabled'
+decrease-height='disabled'
+increase-height='disabled'
+switch-tab4='disabled'
+switch-tab-last='disabled'
+focus-terminal-left='disabled'
+increase-transparency='disabled'
+move-tab-right='disabled'
+split-tab-horizontal='disabled'
+new-tab='disabled'
+decrease-transparency='disabled'
+split-tab-vertical='disabled'
+close-tab='disabled'
+switch-tab10='disabled'
+focus-terminal-right='disabled'
+close-terminal='disabled'
+previous-tab='disabled'
+next-tab='disabled'
+toggle-hide-on-lose-focus='disabled'
+
 [keybindings/global]
 show-hide='<Primary>grave'
 
 [style/background]
-transparency=99
+transparency=97
 
 [style/font]
 allow-bold=true
 style='Hack 13'
-palette='#1F1F1F1F1F1F:#F7F711111818:#2C2CC5C55D5D:#ECECB9B90F0F:#2A2A8484D2D2:#4E4E5959B7B7:#0F0F8080D5D5:#D6D6DADAE4E4:#D6D6DADAE4E4:#DEDE34342E2E:#1D1DD2D26060:#F2F2BDBD0909:#0F0F8080D5D5:#52524F4FB9B9:#0F0F7C7CDADA:#FFFFFFFFFFFF:#D6D6DADAE4E4:#131313131313'
-palette-name='Brogrammer'
+palette='#000000000000:#cdcb00000000:#0000cdcb0000:#cdcbcdcb0000:#1e1a908fffff:#cdcb0000cdcb:#0000cdcbcdcb:#e5e2e5e2e5e2:#4ccc4ccc4ccc:#ffff00000000:#0000ffff0000:#ffffffff0000:#46458281b4ae:#ffff0000ffff:#0000ffffffff:#ffffffffffff:#ffffffffffff:#000000000000'
+palette-name='Xterm'

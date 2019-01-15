@@ -75,6 +75,7 @@
         <value type="string" value="slack"/>
         <value type="string" value="albert"/>
         <value type="string" value="enpass-desktop"/>
+        <value type="string" value="enpass"/>
       </property>
       <property name="show-frame" type="bool" value="false"/>
     </property>
@@ -99,7 +100,7 @@
     </property>
     <property name="plugin-1" type="string" value="whiskermenu"/>
     <property name="plugin-4" type="string" value="pager">
-      <property name="rows" type="uint" value="1"/>
+      <property name="rows" type="uint" value="2"/>
       <property name="miniature-view" type="bool" value="true"/>
       <property name="workspace-scrolling" type="bool" value="true"/>
     </property>
