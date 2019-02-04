@@ -30,3 +30,7 @@ lightdm-gtk-greeter-settings
 words
 albert
 muparser
+python-pip
+xfce4-cpugraph-plugin
+xfce4-xkb-plugin
+blueman
