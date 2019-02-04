@@ -35,3 +35,4 @@ xfce4-cpugraph-plugin
 xfce4-xkb-plugin
 blueman
 jdk-openjdk
+jdk-openjdk8
