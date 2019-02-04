@@ -1,7 +1,7 @@
 [general]
 prompt-on-quit=true
 window-height=97
-mouse-display=true
+mouse-display=false
 window-width=99
 max-tab-name-length=100
 window-losefocus=false
@@ -14,10 +14,10 @@ quick-open-command-line='gedit %(file_path)s'
 compat-delete='delete-sequence'
 default-shell='/usr/bin/fish'
 abbreviate-tab-names=false
-display-n=0
+display-n=-1
 scroll-keystroke=false
 use-default-font=false
-use-trayicon=false
+use-trayicon=true
 use-scrollbar=false
 window-refocus=false
 use-popup=true

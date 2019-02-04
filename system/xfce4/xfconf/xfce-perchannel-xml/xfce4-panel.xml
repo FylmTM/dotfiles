@@ -30,7 +30,7 @@
       <property name="mode" type="uint" value="0"/>
       <property name="autohide-behavior" type="uint" value="0"/>
       <property name="span-monitors" type="bool" value="false"/>
-      <property name="output-name" type="string" value="monitor-0"/>
+      <property name="output-name" type="string" value="Primary"/>
       <property name="nrows" type="uint" value="1"/>
       <property name="disable-struts" type="bool" value="false"/>
       <property name="background-color" type="array">
@@ -85,6 +85,7 @@
     </property>
     <property name="plugin-9" type="string" value="pulseaudio">
       <property name="enable-keyboard-shortcuts" type="bool" value="true"/>
+      <property name="mpris-players" type="string" value="spotify"/>
     </property>
     <property name="plugin-5" type="string" value="clock">
       <property name="mode" type="uint" value="2"/>

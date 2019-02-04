@@ -3,9 +3,12 @@ and not set -q TMUX
     exec tmux
 end
 
-if not functions -q fundle; eval (curl -sfL https://git.io/fundle-install); end
-fundle plugin 'rafaelrinaldi/pure'
-fundle init
+if not functions -q fisher
+    set -q XDG_CONFIG_HOME; or set XDG_CONFIG_HOME ~/.config
+    curl https://git.io/fisher --create-dirs -sLo $XDG_CONFIG_HOME/fish/functions/fisher.fish
+    fish -c fisher
+    fisher add matchai/spacefish
+end
 
 set fish_greeting
 
@@ -72,12 +75,11 @@ end
 alias w1 'watch -n 1'
 
 # Theme
-set -l fish_root $HOME/.config/fish
-set -l pure_root $fish_root/fundle/rafaelrinaldi/pure
-
-if test ! -e $fish_root/functions/fish_prompt.fish -a -e $pure_root/fish_prompt.fish
-    ln -s $pure_root/fish_prompt.fish $fish_root/functions/fish_prompt.fish
-end
-
-set pure_command_max_exec_time 3
-
+export SPACEFISH_DIR_TRUNC=0
+export SPACEFISH_PACKAGE_SHOW=false
+export SPACEFISH_DOCKER_SHOW=false
+export SPACEFISH_RUBY_SHOW=false
+export SPACEFISH_NODE_SHOW=false
+export SPACEFISH_GOLANG_SHOW=false
+export SPACEFISH_BATTERY_SHOW=false
+export SPACEFISH_EXIT_CODE_SHOW=true
