@@ -18,6 +18,8 @@ end
 
 function fish_user_key_bindings
     fzf_key_bindings
+    # Overrice <ctrl>-c to just clean commandlinem, to fix rendering bugs
+    bind \cc 'commandline ""'
 end
 
 # General
@@ -57,7 +59,7 @@ export EDITOR=nvim
 export BROWSER=google-chrome-stable
 
 # Kubernetes
-function kubectl-set-context
+function kubectl-set-namespace
     kubectl config set-context (kubectl config current-context) --namespace=$argv
 end
 
@@ -84,3 +86,4 @@ export SPACEFISH_GOLANG_SHOW=false
 export SPACEFISH_BATTERY_SHOW=false
 export SPACEFISH_EXIT_CODE_SHOW=false
 export SPACEFISH_KUBECONTEXT_SHOW=false
+
