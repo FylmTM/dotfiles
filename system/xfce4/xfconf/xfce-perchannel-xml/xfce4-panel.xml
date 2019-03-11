@@ -60,22 +60,22 @@
     <property name="plugin-6" type="string" value="systray">
       <property name="names-visible" type="array">
         <value type="string" value="toolbox"/>
-        <value type="string" value="pnmixer"/>
-        <value type="string" value="networkmanager applet"/>
-        <value type="string" value="task manager"/>
+        <value type="string" value="albert"/>
         <value type="string" value="guake"/>
+        <value type="string" value="slack"/>
         <value type="string" value="orage"/>
         <value type="string" value="pamac-tray"/>
-        <value type="string" value="xfce terminal"/>
+        <value type="string" value="enpass"/>
+        <value type="string" value="xnoise"/>
+        <value type="string" value="xfce4-power-manager"/>
+        <value type="string" value="task manager"/>
+        <value type="string" value="enpass-desktop"/>
+        <value type="string" value="networkmanager applet"/>
         <value type="string" value="blueman-applet"/>
         <value type="string" value="clipman"/>
-        <value type="string" value="xfce4-power-manager"/>
         <value type="string" value="miniaplicació networkmanager"/>
-        <value type="string" value="xnoise"/>
-        <value type="string" value="slack"/>
-        <value type="string" value="albert"/>
-        <value type="string" value="enpass-desktop"/>
-        <value type="string" value="enpass"/>
+        <value type="string" value="pnmixer"/>
+        <value type="string" value="xfce terminal"/>
       </property>
       <property name="show-frame" type="bool" value="false"/>
     </property>
