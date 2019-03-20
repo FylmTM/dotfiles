@@ -16,3 +16,5 @@ Thumbs.db
 npm-debug.log
 .gradletasknamecache
 *.log
+.envrc
+
