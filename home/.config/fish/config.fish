@@ -87,3 +87,5 @@ export SPACEFISH_BATTERY_SHOW=false
 export SPACEFISH_EXIT_CODE_SHOW=false
 export SPACEFISH_KUBECONTEXT_SHOW=false
 
+# Direnv
+direnv hook fish | source

@@ -7,3 +7,4 @@ google-chrome
 font-manager
 enpass-bin
 spotify
+direnv
