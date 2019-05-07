@@ -110,6 +110,7 @@
       <property name="flat-buttons" type="bool" value="true"/>
       <property name="show-handle" type="bool" value="false"/>
       <property name="show-wireframes" type="bool" value="false"/>
+      <property name="middle-click" type="uint" value="1"/>
     </property>
     <property name="plugin-11" type="string" value="power-manager-plugin"/>
     <property name="plugin-22" type="string" value="separator">
