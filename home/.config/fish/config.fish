@@ -1,5 +1,6 @@
 if status is-interactive
 and not set -q TMUX
+and type -q tmux
     exec tmux
 end
 
