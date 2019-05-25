@@ -1,8 +1,3 @@
 # Dotfiles
 
-## Install
-
-```
-./setup.bash
-```
-
+My dotfiles.
