@@ -10,6 +10,7 @@ mouse-display=true
 open-tab-cwd=true
 prompt-on-quit=true
 quick-open-command-line='gedit %(file_path)s'
+save-tabs-when-changed=true
 scroll-keystroke=false
 use-default-font=false
 use-popup=true

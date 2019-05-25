@@ -78,6 +78,13 @@
         <value type="string" value="xfce terminal"/>
       </property>
       <property name="show-frame" type="bool" value="false"/>
+      <property name="names-ordered" type="array">
+        <value type="string" value="albert"/>
+        <value type="string" value="guake"/>
+        <value type="string" value="pamac-tray"/>
+        <value type="string" value="networkmanager applet"/>
+        <value type="string" value="clipman"/>
+      </property>
     </property>
     <property name="plugin-7" type="string" value="separator">
       <property name="expand" type="bool" value="true"/>

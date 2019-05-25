@@ -1,7 +1,4 @@
 sublime-text-dev
-ttf-kannada-font
-ttf-symbola
-ttf-vlgothic
 slack-desktop
 google-chrome
 font-manager

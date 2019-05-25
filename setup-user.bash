@@ -44,6 +44,10 @@ function installPackages() {
         sudo pip3 install $pipPackage
     done
 
+    echo "Install aur packages"
+    cd $DOTFILES
+    yay --needed --noconfirm -S `cat packages/aur.txt`
+
     echo "Packages installed."
 }
 
