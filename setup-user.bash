@@ -29,7 +29,7 @@ function linkUserConfigs() {
     dconf reset -f /apps/guake/
     dconf load /apps/guake/ < $DOTFILES/system/guake_configuration
 
-    echo "Configuration files linked."
+    echo "Configuration files copied."
 }
 
 function installPackages() {
@@ -43,7 +43,6 @@ function installPackages() {
     for pipPackage in $(cat ./packages/pip.txt); do
         sudo pip3 install $pipPackage
     done
-
 
     echo "Packages installed."
 }
