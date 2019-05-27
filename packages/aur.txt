@@ -1,7 +1,7 @@
-sublime-text-dev
-slack-desktop
-google-chrome
-font-manager
-enpass-bin
-spotify
 direnv
+enpass-bin
+font-manager
+google-chrome
+slack-desktop
+spotify
+sublime-text-dev
