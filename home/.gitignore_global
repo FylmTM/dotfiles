@@ -11,7 +11,6 @@
 *~
 .DS_Store
 .idea/
-Icon
 Thumbs.db
 npm-debug.log
 .gradletasknamecache

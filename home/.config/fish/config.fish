@@ -91,3 +91,7 @@ export SPACEFISH_KUBECONTEXT_SHOW=false
 
 # Direnv
 direnv hook fish | source
+
+# Development
+set PATH $HOME/go/bin $PATH
+
