@@ -27,11 +27,14 @@ noto-fonts-emoji
 npm
 openjdk8-doc
 openjdk8-src
+openjdk11-doc
+openjdk11-src
 openjdk-doc
 openjdk-src
 papirus-icon-theme
 prettyping
 tmux
+tig
 ttf-hack
 visualvm
 words
