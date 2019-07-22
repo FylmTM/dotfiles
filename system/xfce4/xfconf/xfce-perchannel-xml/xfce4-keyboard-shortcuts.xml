@@ -12,11 +12,13 @@
       </property>
       <property name="&lt;Primary&gt;&lt;Alt&gt;Delete" type="empty"/>
       <property name="&lt;Primary&gt;&lt;Alt&gt;l" type="empty"/>
+      <property name="&lt;Primary&gt;&lt;Alt&gt;t" type="empty"/>
       <property name="XF86Display" type="empty"/>
       <property name="&lt;Super&gt;p" type="empty"/>
       <property name="&lt;Primary&gt;Escape" type="empty"/>
       <property name="XF86WWW" type="empty"/>
       <property name="XF86Mail" type="empty"/>
+      <property name="Print" type="empty"/>
       <property name="&lt;Control&gt;&lt;Alt&gt;Delete" type="empty"/>
       <property name="&lt;Control&gt;Escape" type="empty"/>
     </property>
@@ -35,10 +37,10 @@
       <property name="&lt;Super&gt;t" type="string" value="subl3 ~/TODO"/>
       <property name="&lt;Super&gt;l" type="string" value="xflock4"/>
       <property name="&lt;Super&gt;End" type="string" value="dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.PlayPause"/>
-      <property name="&lt;Super&gt;Page_Down" type="string" value="dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Previous"/>
-      <property name="&lt;Super&gt;Page_Up" type="string" value="dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Next"/>
       <property name="&lt;Super&gt;w" type="string" value="firefox-developer-edition"/>
       <property name="&lt;Super&gt;s" type="string" value="slack"/>
+      <property name="&lt;Super&gt;Page_Down" type="string" value="dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Next"/>
+      <property name="&lt;Super&gt;Page_Up" type="string" value="dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Previous"/>
     </property>
   </property>
   <property name="xfwm4" type="empty">

@@ -62,11 +62,9 @@
     <property name="plugin-6" type="string" value="systray">
       <property name="names-visible" type="array">
         <value type="string" value="toolbox"/>
-        <value type="string" value="albert"/>
-        <value type="string" value="guake"/>
-        <value type="string" value="slack"/>
         <value type="string" value="orage"/>
         <value type="string" value="pamac-tray"/>
+        <value type="string" value="blueman"/>
         <value type="string" value="enpass"/>
         <value type="string" value="xnoise"/>
         <value type="string" value="xfce4-power-manager"/>
@@ -77,6 +75,7 @@
         <value type="string" value="clipman"/>
         <value type="string" value="miniaplicació networkmanager"/>
         <value type="string" value="pnmixer"/>
+        <value type="string" value="blueman-tray"/>
         <value type="string" value="xfce terminal"/>
       </property>
       <property name="show-frame" type="bool" value="false"/>
@@ -90,6 +89,7 @@
       <property name="names-hidden" type="array">
         <value type="string" value="albert"/>
         <value type="string" value="guake"/>
+        <value type="string" value="slack"/>
       </property>
       <property name="square-icons" type="bool" value="false"/>
     </property>
@@ -99,7 +99,7 @@
     </property>
     <property name="plugin-9" type="string" value="pulseaudio">
       <property name="enable-keyboard-shortcuts" type="bool" value="true"/>
-      <property name="mpris-players" type="string" value="spotify"/>
+      <property name="mpris-players" type="string" value="chrome.instance2372;chrome.instance31555;spotify"/>
     </property>
     <property name="plugin-5" type="string" value="clock">
       <property name="mode" type="uint" value="2"/>
