@@ -4,7 +4,7 @@ DOTFILES=$HOME/.dotfiles
 
 function linkUserConfigs() {
     echo "Link configuration files..."
-    cp -frTv "$DOTFILES/home/" $HOME
+    cp -frTvs "$DOTFILES/home/" $HOME
 
     cd $DOTFILES
     NAME="Dmitry Vrublevsky"
@@ -39,6 +39,10 @@ function installPackages() {
     cd $DOTFILES
     sudo pacman --noconfirm -S --needed `cat packages/pacman.txt`
 
+    echo "Remove unnecessary pacman packages"
+    cd $DOTFILES
+    sudo pacman --noconfirm -Rs `cat packages/pacman.remove.txt` || true
+
     echo "Install pip3 packages"
     for pipPackage in $(cat ./packages/pip.txt); do
         sudo pip3 install $pipPackage
@@ -46,7 +50,7 @@ function installPackages() {
 
     echo "Install aur packages"
     cd $DOTFILES
-    yay --needed --noconfirm -S `cat packages/aur.txt`
+    yay --pgpfetch --needed --noconfirm -S `cat packages/aur.txt`
 
     echo "Packages installed."
 }

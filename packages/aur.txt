@@ -3,5 +3,4 @@ enpass-bin
 font-manager
 google-chrome
 slack-desktop
-spotify
 sublime-text-dev
