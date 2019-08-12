@@ -4,7 +4,7 @@ set scrolloff=3
 set ignorecase smartcase
 set showmode
 set history=1000
-set clipboard=unnamed,unnamedplus
+set clipboard=unnamed,unnamedplus,ideaput
 
 " Reload config
 map ,wr :source ~/.ideavimrc<CR>
@@ -48,9 +48,8 @@ nnoremap [ :action EditorCodeBlockStart<CR>
 nnoremap ] :action EditorCodeBlockEnd<CR>
 map <C-Left> :action JumpToLastChange<CR>
 map <C-Right> :action JumpToNextChange<CR>
+map button=4 clickCount=1 modifiers=0 <A-Left> :action Back<CR>
+map button=5 clickCount=1 modifiers=0 <A-Right> :action Forward<CR>
 nnoremap J 5j
 nnoremap K 5k
-
-" Maven
-nnoremap \m :action Maven.ReimportProject<CR>
 
