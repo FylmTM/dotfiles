@@ -63,14 +63,14 @@
       <property name="names-visible" type="array">
         <value type="string" value="toolbox"/>
         <value type="string" value="orage"/>
-        <value type="string" value="pamac-tray"/>
         <value type="string" value="blueman"/>
+        <value type="string" value="pamac-tray"/>
         <value type="string" value="enpass"/>
-        <value type="string" value="xnoise"/>
+        <value type="string" value="networkmanager applet"/>
         <value type="string" value="xfce4-power-manager"/>
         <value type="string" value="task manager"/>
+        <value type="string" value="xnoise"/>
         <value type="string" value="enpass-desktop"/>
-        <value type="string" value="networkmanager applet"/>
         <value type="string" value="blueman-applet"/>
         <value type="string" value="clipman"/>
         <value type="string" value="miniaplicació networkmanager"/>
@@ -99,7 +99,7 @@
     </property>
     <property name="plugin-9" type="string" value="pulseaudio">
       <property name="enable-keyboard-shortcuts" type="bool" value="true"/>
-      <property name="mpris-players" type="string" value="chrome.instance2372;chrome.instance31555;spotify"/>
+      <property name="mpris-players" type="string" value="spotify"/>
     </property>
     <property name="plugin-5" type="string" value="clock">
       <property name="mode" type="uint" value="2"/>
