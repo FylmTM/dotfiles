@@ -29,6 +29,7 @@ alias e='exit'
 alias clr='clear'
 alias hosts='sudo vim /etc/hosts'
 alias tree="ls --tree"
+alias dot="cd ~/.dotfiles"
 
 # Git
 abbr grev 'git review'
