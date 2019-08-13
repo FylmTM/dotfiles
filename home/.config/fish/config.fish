@@ -76,6 +76,11 @@ function docker-stop-all --description 'Stop and remove all Docker container'
     docker ps -a -q
 end
 
+# Go to project
+function p --description 'Jump to project'
+    cd $HOME/workspace/(find $HOME/workspace -maxdepth 5 -type f -name '.project' -printf "%h\n" | sed "s|$HOME/workspace/||g" | fzf --height 10 --border)
+end
+
 # Helpers
 alias w1 'watch -n 1'
 

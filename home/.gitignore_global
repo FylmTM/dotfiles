@@ -16,4 +16,4 @@ npm-debug.log
 .gradletasknamecache
 *.log
 .envrc
-
+.project
