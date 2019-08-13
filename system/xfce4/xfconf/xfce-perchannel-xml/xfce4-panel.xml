@@ -80,6 +80,11 @@
       </property>
       <property name="show-frame" type="bool" value="false"/>
       <property name="names-ordered" type="array">
+        <value type="string" value="xfce terminal"/>
+        <value type="string" value="toolbox"/>
+        <value type="string" value="slack"/>
+        <value type="string" value="enpass"/>
+        <value type="string" value="blueman-tray"/>
         <value type="string" value="albert"/>
         <value type="string" value="guake"/>
         <value type="string" value="pamac-tray"/>
@@ -99,7 +104,7 @@
     </property>
     <property name="plugin-9" type="string" value="pulseaudio">
       <property name="enable-keyboard-shortcuts" type="bool" value="true"/>
-      <property name="mpris-players" type="string" value="spotify"/>
+      <property name="mpris-players" type="string" value="chrome.instance2372;chrome.instance31555;chrome.instance426;spotify"/>
     </property>
     <property name="plugin-5" type="string" value="clock">
       <property name="mode" type="uint" value="2"/>
@@ -125,6 +130,9 @@
       <property name="show-handle" type="bool" value="false"/>
       <property name="show-wireframes" type="bool" value="false"/>
       <property name="middle-click" type="uint" value="1"/>
+      <property name="sort-order" type="uint" value="4"/>
+      <property name="grouping" type="uint" value="0"/>
+      <property name="include-all-monitors" type="bool" value="true"/>
     </property>
     <property name="plugin-11" type="string" value="power-manager-plugin"/>
     <property name="plugin-22" type="string" value="separator">

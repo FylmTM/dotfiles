@@ -22,12 +22,7 @@ function linkUserConfigs() {
     cp -frTv "$DOTFILES/system/xfce4/" $HOME/.config/xfce4
 
     echo "Configure autostart"
-    sudo cp /usr/share/applications/guake.desktop /etc/xdg/autostart/
     sudo cp /usr/share/applications/albert.desktop /etc/xdg/autostart/
-
-    echo "Configure Guake"
-    dconf reset -f /apps/guake/
-    dconf load /apps/guake/ < $DOTFILES/system/guake_configuration
 
     echo "Configuration files copied."
 }

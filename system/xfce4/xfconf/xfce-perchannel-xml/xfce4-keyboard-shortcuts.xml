@@ -26,12 +26,11 @@
       <property name="&lt;Alt&gt;F3" type="empty">
         <property name="startup-notify" type="bool" value="true"/>
       </property>
-      <property name="&lt;Alt&gt;F2" type="string" value="xfce4-appfinder --collapsed">
+      <property name="&lt;Alt&gt;F2" type="empty">
         <property name="startup-notify" type="bool" value="true"/>
       </property>
       <property name="override" type="bool" value="true"/>
       <property name="&lt;Primary&gt;&lt;Alt&gt;x" type="string" value="xkill"/>
-      <property name="&lt;Primary&gt;&lt;Alt&gt;t" type="string" value="xfce4-terminal"/>
       <property name="Print" type="string" value="deepin-screenshot -i"/>
       <property name="&lt;Super&gt;space" type="string" value="albert toggle"/>
       <property name="&lt;Super&gt;t" type="string" value="subl3 ~/TODO"/>
@@ -41,6 +40,7 @@
       <property name="&lt;Super&gt;s" type="string" value="slack"/>
       <property name="&lt;Super&gt;Page_Down" type="string" value="dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Next"/>
       <property name="&lt;Super&gt;Page_Up" type="string" value="dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Previous"/>
+      <property name="&lt;Primary&gt;grave" type="string" value="xfce4-terminal --drop-down"/>
     </property>
   </property>
   <property name="xfwm4" type="empty">
