@@ -80,6 +80,7 @@
       </property>
       <property name="show-frame" type="bool" value="false"/>
       <property name="names-ordered" type="array">
+        <value type="string" value="blueman"/>
         <value type="string" value="xfce terminal"/>
         <value type="string" value="toolbox"/>
         <value type="string" value="slack"/>
