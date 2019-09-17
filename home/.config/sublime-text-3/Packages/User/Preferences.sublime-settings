@@ -1,5 +1,4 @@
 {
-	"update_check": false,
 	"color_scheme": "Monokai.sublime-color-scheme",
 	"ensure_newline_at_eof_on_save": true,
 	"font_size": 14,
@@ -11,5 +10,6 @@
 	"save_on_focus_lost": true,
 	"spell_check": true,
 	"theme": "Adaptive.sublime-theme",
-	"translate_tabs_to_spaces": true
+	"translate_tabs_to_spaces": true,
+	"update_check": false
 }
