@@ -42,6 +42,7 @@
       <property name="&lt;Super&gt;Page_Up" type="string" value="dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Previous"/>
       <property name="&lt;Primary&gt;grave" type="string" value="xfce4-terminal --drop-down"/>
       <property name="&lt;Primary&gt;&lt;Alt&gt;t" type="string" value="xfce4-terminal"/>
+      <property name="&lt;Super&gt;z" type="string" value="enpass"/>
     </property>
   </property>
   <property name="xfwm4" type="empty">
