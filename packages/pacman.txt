@@ -3,6 +3,7 @@ base-devel
 bat
 blueman
 deepin-screenshot
+cmake
 diff-so-fancy
 docker
 docker-compose
@@ -40,5 +41,6 @@ words
 xclip
 xfce4-cpugraph-plugin
 xfce4-xkb-plugin
+xfce4-screensaver
 yarn
 yay

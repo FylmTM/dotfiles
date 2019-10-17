@@ -1,6 +1,6 @@
 direnv
 enpass-bin
-font-manager
 google-chrome
 slack-desktop
 sublime-text-dev
+spotify
