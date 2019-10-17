@@ -80,6 +80,8 @@
       </property>
       <property name="show-frame" type="bool" value="false"/>
       <property name="names-ordered" type="array">
+        <value type="string" value="xfce4-power-manager"/>
+        <value type="string" value="msm notifier"/>
         <value type="string" value="scp-dbus-service.py"/>
         <value type="string" value="blueman"/>
         <value type="string" value="xfce terminal"/>
@@ -106,11 +108,12 @@
     </property>
     <property name="plugin-9" type="string" value="pulseaudio">
       <property name="enable-keyboard-shortcuts" type="bool" value="true"/>
-      <property name="mpris-players" type="string" value="chrome.instance2372;chrome.instance31555;chrome.instance426;spotify"/>
+      <property name="mpris-players" type="string" value="chrome.instance2372;chrome.instance31555;chrome.instance426;chrome.instance7581;spotify"/>
     </property>
     <property name="plugin-5" type="string" value="clock">
       <property name="mode" type="uint" value="2"/>
       <property name="digital-format" type="string" value="%a, %e %b %Y, %R"/>
+      <property name="timezone" type="string" value="Europe/Riga"/>
     </property>
     <property name="plugin-8" type="string" value="cpugraph"/>
     <property name="plugin-10" type="string" value="xkb">

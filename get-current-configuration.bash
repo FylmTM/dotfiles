@@ -13,4 +13,3 @@ cp -f $HOME/.config/xfce4/terminal/terminalrc $DOTFILES/system/xfce4/terminal/te
 cp -f $HOME/.config/xfce4/panel/cpugraph-8.rc $DOTFILES/system/xfce4/panel/cpugraph-8.rc
 cp -f $HOME/.config/xfce4/panel/default.xml $DOTFILES/system/xfce4/panel/default.xml
 
-cp -f /etc/lightdm/lightdm-gtk-greeter.conf $DOTFILES/etc/lightdm/lightdm-gtk-greeter.conf
