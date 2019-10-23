@@ -80,6 +80,9 @@
       </property>
       <property name="show-frame" type="bool" value="false"/>
       <property name="names-ordered" type="array">
+        <value type="string" value="mailspring"/>
+        <value type="string" value="orage"/>
+        <value type="string" value="networkmanager sīklietotne"/>
         <value type="string" value="xfce4-power-manager"/>
         <value type="string" value="msm notifier"/>
         <value type="string" value="scp-dbus-service.py"/>

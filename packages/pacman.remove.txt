@@ -4,3 +4,5 @@ firefox-adblock-plus
 firefox-dark-reader
 firefox-decentraleyes
 light-locker
+pidgin
+thunderbird
