@@ -101,4 +101,5 @@ direnv hook fish | source
 
 # Development
 set PATH $HOME/go/bin $PATH
+export GOPATH=$HOME/go
 
