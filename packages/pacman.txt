@@ -33,6 +33,7 @@ openjdk-doc
 openjdk-src
 papirus-icon-theme
 prettyping
+ripgrep
 tmux
 tig
 ttf-hack
