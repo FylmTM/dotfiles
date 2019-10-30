@@ -6,3 +6,10 @@ firefox-decentraleyes
 light-locker
 pidgin
 thunderbird
+steam-manjaro
+mousepad
+gimp
+audacious
+audacious-plugins
+hexchat
+xfce4-notes-plugin

@@ -81,6 +81,7 @@
       </property>
       <property name="show-frame" type="bool" value="false"/>
       <property name="names-ordered" type="array">
+        <value type="string" value="notes"/>
         <value type="string" value="buildnotifyapplet.py"/>
         <value type="string" value="google-play-music-desktop-player"/>
         <value type="string" value="mailspring"/>
@@ -114,7 +115,7 @@
     </property>
     <property name="plugin-9" type="string" value="pulseaudio">
       <property name="enable-keyboard-shortcuts" type="bool" value="true"/>
-      <property name="mpris-players" type="string" value="chrome.instance2372;chrome.instance31555;chrome.instance426;chrome.instance7581;google-play-music-desktop-player;spotify"/>
+      <property name="mpris-players" type="string" value="chrome.instance2372;chrome.instance31555;chrome.instance426;chrome.instance7581;chromium.instance1600;google-play-music-desktop-player;spotify"/>
     </property>
     <property name="plugin-5" type="string" value="clock">
       <property name="mode" type="uint" value="2"/>
