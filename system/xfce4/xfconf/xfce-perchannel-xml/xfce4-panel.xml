@@ -3,6 +3,8 @@
 <channel name="xfce4-panel" version="1.0">
   <property name="panels" type="array">
     <value type="int" value="0"/>
+    <value type="int" value="1"/>
+    <value type="int" value="2"/>
     <property name="panel-0" type="empty">
       <property name="position" type="string" value="p=6;x=960;y=13"/>
       <property name="length" type="uint" value="100"/>
@@ -40,6 +42,31 @@
         <value type="uint" value="5285"/>
         <value type="uint" value="5285"/>
         <value type="uint" value="65535"/>
+      </property>
+    </property>
+    <property name="panel-1" type="empty">
+      <property name="position" type="string" value="p=6;x=960;y=13"/>
+      <property name="size" type="uint" value="25"/>
+      <property name="icon-size" type="uint" value="0"/>
+      <property name="output-name" type="string" value="DP2-2"/>
+      <property name="position-locked" type="bool" value="true"/>
+      <property name="length" type="uint" value="100"/>
+      <property name="plugin-ids" type="array">
+        <value type="int" value="18"/>
+        <value type="int" value="15"/>
+        <value type="int" value="19"/>
+      </property>
+    </property>
+    <property name="panel-2" type="empty">
+      <property name="position" type="string" value="p=6;x=4800;y=16"/>
+      <property name="size" type="uint" value="25"/>
+      <property name="output-name" type="string" value="DP2-1"/>
+      <property name="position-locked" type="bool" value="true"/>
+      <property name="length" type="uint" value="100"/>
+      <property name="plugin-ids" type="array">
+        <value type="int" value="20"/>
+        <value type="int" value="16"/>
+        <value type="int" value="21"/>
       </property>
     </property>
   </property>
@@ -115,7 +142,7 @@
     </property>
     <property name="plugin-9" type="string" value="pulseaudio">
       <property name="enable-keyboard-shortcuts" type="bool" value="true"/>
-      <property name="mpris-players" type="string" value="chrome.instance2372;chrome.instance31555;chrome.instance426;chrome.instance7581;chromium.instance1600;google-play-music-desktop-player;spotify"/>
+      <property name="mpris-players" type="string" value="chrome.instance2372;chrome.instance29248;chrome.instance31555;chrome.instance426;chrome.instance7581;chromium.instance1590;chromium.instance1600;chromium.instance27666;google-play-music-desktop-player;spotify"/>
     </property>
     <property name="plugin-5" type="string" value="clock">
       <property name="mode" type="uint" value="2"/>
@@ -144,11 +171,14 @@
       <property name="middle-click" type="uint" value="1"/>
       <property name="sort-order" type="uint" value="4"/>
       <property name="grouping" type="uint" value="0"/>
-      <property name="include-all-monitors" type="bool" value="true"/>
+      <property name="include-all-monitors" type="bool" value="false"/>
+      <property name="include-all-workspaces" type="bool" value="false"/>
+      <property name="show-only-minimized" type="bool" value="false"/>
     </property>
     <property name="plugin-11" type="string" value="power-manager-plugin"/>
     <property name="plugin-22" type="string" value="separator">
       <property name="style" type="uint" value="0"/>
+      <property name="expand" type="bool" value="false"/>
     </property>
     <property name="plugin-23" type="string" value="separator">
       <property name="style" type="uint" value="0"/>
@@ -158,6 +188,37 @@
       <property name="expand" type="bool" value="false"/>
     </property>
     <property name="plugin-13" type="string" value="mailwatch"/>
+    <property name="plugin-15" type="string" value="tasklist">
+      <property name="flat-buttons" type="bool" value="true"/>
+      <property name="middle-click" type="uint" value="1"/>
+      <property name="switch-workspace-on-unminimize" type="bool" value="false"/>
+      <property name="include-all-monitors" type="bool" value="false"/>
+      <property name="show-handle" type="bool" value="false"/>
+      <property name="sort-order" type="uint" value="4"/>
+    </property>
+    <property name="plugin-16" type="string" value="tasklist">
+      <property name="middle-click" type="uint" value="1"/>
+      <property name="switch-workspace-on-unminimize" type="bool" value="false"/>
+      <property name="include-all-monitors" type="bool" value="false"/>
+      <property name="sort-order" type="uint" value="4"/>
+      <property name="show-handle" type="bool" value="false"/>
+    </property>
+    <property name="plugin-18" type="string" value="separator">
+      <property name="style" type="uint" value="0"/>
+      <property name="expand" type="bool" value="true"/>
+    </property>
+    <property name="plugin-19" type="string" value="separator">
+      <property name="style" type="uint" value="0"/>
+      <property name="expand" type="bool" value="true"/>
+    </property>
+    <property name="plugin-20" type="string" value="separator">
+      <property name="expand" type="bool" value="true"/>
+      <property name="style" type="uint" value="0"/>
+    </property>
+    <property name="plugin-21" type="string" value="separator">
+      <property name="style" type="uint" value="0"/>
+      <property name="expand" type="bool" value="true"/>
+    </property>
   </property>
   <property name="configver" type="int" value="2"/>
 </channel>
