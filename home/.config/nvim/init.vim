@@ -102,14 +102,9 @@ filetype plugin indent on      " Indent and plugins by filetype
 " }}}
 
 " Scortcuts {{{ ===============================================================
-    " Edit {{{
-        nmap \w :w!<CR>
-    " }}}
     " Basic {{{
         " Clear the search highlight in Normal mode
         nnoremap <silent> <Esc><Esc> :nohlsearch<CR><Esc>
-        " FixWhitespaces
-        map <F5> :FixWhitespace<CR>
     " }}}
     " Windows {{{
         " Fast windows moves
@@ -139,20 +134,6 @@ filetype plugin indent on      " Indent and plugins by filetype
         else
             set clipboard=unnamedplus
         endif
-    " }}}
-    " Spelling {{{
-        " turn on the spell checking and set the English language
-        nmap <Leader>se :setlocal spell spelllang=en<CR>
-        " turn off the spell checking
-        nmap <Leader>so :setlocal nospell <CR>
-        " jump to the next bad spell word
-        nmap <Leader>sn ]s
-        " suggest words
-        nmap <Leader>sp z=
-        " jump to the next bad spell word and suggests a correct one
-        nmap <Leader>sc ]sz=
-        " add word to the dictionary
-        nmap <Leader>sa zg
     " }}}
     " Search {{{
         " Search matches are always in center
@@ -209,7 +190,9 @@ filetype plugin indent on      " Indent and plugins by filetype
     " }}}
 " }}}
 
+" Fix for windows
 "let &t_ti.="\e[1 q"
 "let &t_SI.="\e[5 q"
 "let &t_EI.="\e[1 q"
 "let &t_te.="\e[0 q"
+

@@ -20,14 +20,14 @@ end
 
 function fish_user_key_bindings
     fzf_key_bindings
-    # Overrice <ctrl>-c to just clean commandlinem, to fix rendering bugs
+    # Overrice <ctrl>-c to just clean commandline.
+    # Also it fixes rendering of 2-line promts.
     bind \cc 'commandline ""'
 end
 
 # General
 alias e='exit'
 alias clr='clear'
-alias hosts='sudo vim /etc/hosts'
 alias tree="ls --tree"
 alias dot="cd ~/.dotfiles"
 
@@ -79,7 +79,7 @@ end
 
 # Go to project
 function p --description 'Jump to project'
-    cd $HOME/workspace/(find $HOME/workspace -maxdepth 5 -type f -name '.project' -printf "%h\n" | sed "s|$HOME/workspace/||g" | fzf --height 10 --border)
+    cd $HOME/work/(find $HOME/work -maxdepth 5 -type f -name '.project' -printf "%h\n" | sed "s|$HOME/workspace/||g" | fzf --height 10 --border)
 end
 
 # Helpers
