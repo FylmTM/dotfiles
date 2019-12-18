@@ -1,30 +1,23 @@
 set nocompatible
 
 if empty(glob('~/.vim/autoload/plug.vim'))
-  silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
+  silent !curl -kfLo ~/.vim/autoload/plug.vim --create-dirs
     \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-  autocmd VimEnter * PlugInstall | source $MYVIMRC
+  autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
 endif
 
-" NeoBundle auto-installation and setup {{{
+" Plug auto-installation and setup {{{
     call plug#begin()
 
     " Bundles
         " Interface
             Plug 'itchyny/lightline.vim'
-            Plug 'scrooloose/nerdtree'
+            Plug 'scrooloose/nerdtree', {'on': 'NERDTreeToggle'}
         " Colorschemes
             Plug 'joedicastro/vim-molokai256'
         " Editing
-            if has('unix') && has ('mac')
-                Plug 'kana/vim-fakeclip'
-            endif
-            "Plug 'Valloric/YouCompleteMe', {'do': './install.py'}
-            "Plug 'junegunn/fzf'
-            "Plug 'junegunn/fzf.vim'
             Plug 'scrooloose/syntastic'
             Plug 'scrooloose/nerdcommenter'
-            Plug 'bronson/vim-trailing-whitespace'
         " Syntax support
             Plug 'tpope/vim-markdown'
     call plug#end()
@@ -106,14 +99,9 @@ filetype plugin indent on      " Indent and plugins by filetype
 " }}}
 
 " Scortcuts {{{ ===============================================================
-    " Edit {{{
-        nmap \w :w!<CR>
-    " }}}
     " Basic {{{
         " Clear the search highlight in Normal mode
         nnoremap <silent> <Esc><Esc> :nohlsearch<CR><Esc>
-        " FixWhitespaces
-        map <F5> :FixWhitespace<CR>
     " }}}
     " Windows {{{
         " Fast windows moves
@@ -134,29 +122,6 @@ filetype plugin indent on      " Indent and plugins by filetype
         nnoremap <silent><Leader>K :bd<CR>
         " Fast switch between two last windows
         nnoremap <leader><leader> <c-^>
-    " }}}
-    " Cut/Paste {{{
-        " toggle paste mode
-        map <Leader>P :set invpaste<CR>
-        if has('unix') && has ('mac')
-            set clipboard=unnamed
-        else
-            "set clipboard=unnamedplus
-        endif
-    " }}}
-    " Spelling {{{
-        " turn on the spell checking and set the English language
-        nmap <Leader>se :setlocal spell spelllang=en<CR>
-        " turn off the spell checking
-        nmap <Leader>so :setlocal nospell <CR>
-        " jump to the next bad spell word
-        nmap <Leader>sn ]s
-        " suggest words
-        nmap <Leader>sp z=
-        " jump to the next bad spell word and suggests a correct one
-        nmap <Leader>sc ]sz=
-        " add word to the dictionary
-        nmap <Leader>sa zg
     " }}}
     " Search {{{
         " Search matches are always in center
@@ -188,16 +153,6 @@ filetype plugin indent on      " Indent and plugins by filetype
           endif
         endfunction
     " }}}
-    " YouCompleteMe {{{
-        let g:ycm_complete_in_comments = 1
-        let g:ycm_collect_identifiers_from_tags_files = 1
-        let g:ycm_key_invoke_completion = '<C-Space>'
-        let g:ycm_cache_omnifunc = 1
-    " }}}
-    " FZF {{{
-        map <leader>t :Files<CR>
-        map <leader>b :Buffer<CR>
-    " }}}
     " NerdTree {{{
         " Toggle NERDTree
         map <C-x> :NERDTreeToggle<CR>
@@ -217,7 +172,9 @@ filetype plugin indent on      " Indent and plugins by filetype
     " }}}
 " }}}
 
+" Fix for windows
 let &t_ti.="\e[1 q"
 let &t_SI.="\e[5 q"
 let &t_EI.="\e[1 q"
 let &t_te.="\e[0 q"
+

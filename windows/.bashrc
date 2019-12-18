@@ -13,7 +13,7 @@ set -o noclobber
 shopt -s checkwinsize
 
 # Automatically trim long paths in the prompt (requires Bash 4.x)
-PROMPT_DIRTRIM=3
+PROMPT_DIRTRIM=10
 
 # Enable history expansion with space
 # E.g. typing !!<space> will replace the !! with your last command
@@ -98,10 +98,24 @@ alias gd="git diff"
 alias glog="git log"
 
 ####
+#### Helpful aliases
+####
+
+alias e=exit
+alias open=explorer
+
+####
+#### Prompt
+####
+
+export PS1="\n\[\033[33m\]\w\[\033[36m\]\[\033[0m\]\n$ "
+
+####
 #### Load local environment if it exists
 ####
 
 if test -f ~/.env.bash; then
     source ~/.env.bash
 fi
+
 
