@@ -120,3 +120,11 @@ if test -f ~/.env.bash; then
     source ~/.env.bash
 fi
 
+####
+#### winpty wrapper for some non-msys2 applications
+#### Explanation: https://github.com/git-for-windows/build-extra/blob/master/ReleaseNotes.md
+####
+
+alias node="winpty $(which node)"
+alias gradlew="winpty ./gradlew.bat"
+

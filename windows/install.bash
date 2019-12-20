@@ -3,4 +3,5 @@
 cp .bashrc ~/.bashrc
 cp .minttyrc ~/.minttyrc
 cp .vimrc ~/.vimrc
+cp .gvimrc ~/.gvimrc
 
