@@ -1,11 +1,5 @@
 set nocompatible
 
-if empty(glob('~/.vim/autoload/plug.vim'))
-  silent !curl -kfLo ~/.vim/autoload/plug.vim --create-dirs
-    \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-  autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
-endif
-
 " Plug auto-installation and setup {{{
     call plug#begin()
 
