@@ -36,6 +36,7 @@ nnoremap \d :action DebugClass<CR>
 
 " Code
 nnoremap \s :action FileStructurePopup<CR>
+nnoremap \f :action SelectInProjectView<CR>
 
 " Code navigation
 nnoremap [ :action EditorCodeBlockStart<CR>
