@@ -85,6 +85,10 @@ end
 # Helpers
 alias w1 'watch -n 1'
 
+function cheat
+    curl cht.sh/$argv
+end
+
 # Theme
 export SPACEFISH_DIR_TRUNC=0
 export SPACEFISH_PACKAGE_SHOW=false
