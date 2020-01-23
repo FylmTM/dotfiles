@@ -86,8 +86,10 @@ end
 alias w1 'watch -n 1'
 
 function cheat
-    curl cht.sh/$argv
+    curl cheat.sh/$argv
 end
+# register completions (on-the-fly, non-cached, because the actual command won't be cached anyway
+complete -c cheat -xa '(curl -s cheat.sh/:list)'
 
 # Theme
 export SPACEFISH_DIR_TRUNC=0
