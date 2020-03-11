@@ -105,6 +105,9 @@ export SPACEFISH_KUBECONTEXT_SHOW=false
 # Direnv
 direnv hook fish | source
 
+# Local utilities
+set PATH $HOME/.bin $PATH
+
 # Development
 set PATH $HOME/go/bin $PATH
 export GOPATH=$HOME/go
