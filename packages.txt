@@ -1,0 +1,10 @@
+prettyping
+bat
+cloc
+diff-so-fancy
+direnv
+exa
+watch
+fish
+fzf
+neovim
