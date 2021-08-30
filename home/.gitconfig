@@ -2,6 +2,7 @@
     excludesfile = ~/.gitignore_global
     autocrlf = input
     safecrlf = true
+    commentChar = "#"
 [user]
     name = Dmitry Vrublevsky
     email = dmitry@vrublevsky.me

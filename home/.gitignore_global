@@ -18,3 +18,4 @@ npm-debug.log
 .envrc
 .project
 target/
+.donotcommit/

@@ -1,10 +1,11 @@
-prettyping
 bat
 cloc
 diff-so-fancy
 direnv
 exa
-watch
 fish
 fzf
+jetbrains-toolbox
 neovim
+prettyping
+watch
