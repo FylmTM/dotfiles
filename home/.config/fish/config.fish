@@ -1,14 +1,7 @@
-if status is-interactive
-and not set -q TMUX
-and type -q tmux
-    exec tmux
-end
-
 if not functions -q fisher
     set -q XDG_CONFIG_HOME; or set XDG_CONFIG_HOME ~/.config
     curl https://git.io/fisher --create-dirs -sLo $XDG_CONFIG_HOME/fish/functions/fisher.fish
     fish -c fisher
-    fisher install matchai/spacefish
     fisher install evanlucas/fish-kubectl-completions
 end
 
@@ -16,13 +9,6 @@ set fish_greeting
 
 if test -e ~/.config/fish/environment.fish
     . ~/.config/fish/environment.fish
-end
-
-function fish_user_key_bindings
-    fzf_key_bindings
-    # Overrice <ctrl>-c to just clean commandline.
-    # Also it fixes rendering of 2-line promts.
-    bind \cc 'commandline ""'
 end
 
 # General
@@ -57,6 +43,7 @@ alias ll='exa --long'
 alias la='exa --long --all'
 alias lst='exa --tree'
 alias vim='nvim'
+alias find='fd'
 
 # Environment
 export EDITOR=nvim
@@ -91,16 +78,8 @@ end
 # register completions (on-the-fly, non-cached, because the actual command won't be cached anyway
 complete -c cheat -xa '(curl -s cheat.sh/:list)'
 
-# Theme
-export SPACEFISH_DIR_TRUNC=0
-export SPACEFISH_PACKAGE_SHOW=false
-export SPACEFISH_DOCKER_SHOW=false
-export SPACEFISH_RUBY_SHOW=false
-export SPACEFISH_NODE_SHOW=false
-export SPACEFISH_GOLANG_SHOW=false
-export SPACEFISH_BATTERY_SHOW=false
-export SPACEFISH_EXIT_CODE_SHOW=false
-export SPACEFISH_KUBECONTEXT_SHOW=false
+# Prompt
+starship init fish | source
 
 # Direnv
 direnv hook fish | source

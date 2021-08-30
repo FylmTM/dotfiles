@@ -33,8 +33,19 @@
     changed = green
     untracked = cyan
 [pager]
-    diff = diff-so-fancy | less --tabs=1,5 -RFX
-    show = diff-so-fancy | less --tabs=1,5 -RFX
+    diff = delta
+    log = delta
+    reflog = delta
+    show = delta
+[delta]
+    line-numbers = true
+    side-by-side = false
+    plus-style = "syntax #012800"
+    minus-style = "syntax #340001"
+    syntax-theme = Monokai Extended
+    navigate = false
+[interactive]
+    diffFilter = delta --color-only
 [merge]
     ff = only
 [pull]

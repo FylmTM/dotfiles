@@ -16,7 +16,6 @@ endif
         " Colorschemes
             Plug 'joedicastro/vim-molokai256'
         " Editing
-            "Plug 'Valloric/YouCompleteMe', {'do': './install.py'}
             Plug 'scrooloose/syntastic'
             Plug 'scrooloose/nerdcommenter'
             Plug 'bronson/vim-trailing-whitespace'
