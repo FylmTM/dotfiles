@@ -87,7 +87,10 @@ direnv hook fish | source
 # Local utilities
 set PATH $HOME/.bin $PATH
 
-# Development
+# Golang
 set PATH $HOME/go/bin $PATH
 export GOPATH=$HOME/go
+
+# Rust
+set PATH $HOME/.cargo/bin/ $PATH
 

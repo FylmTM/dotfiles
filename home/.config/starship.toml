@@ -1,0 +1,12 @@
+[aws]
+disabled=true
+
+[rust]
+disabled=true
+
+[package]
+disabled=true
+
+[cmd_duration]
+min_time=1000
+show_milliseconds=false

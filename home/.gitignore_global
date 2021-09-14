@@ -19,3 +19,4 @@ npm-debug.log
 .project
 target/
 .donotcommit/
+.cargo-ok
