@@ -39,11 +39,12 @@ alias cat='bat --style=header'
 alias ping='prettyping --nolegend'
 alias top='htop'
 alias ls='exa'
-alias ll='exa --long'
-alias la='exa --long --all'
+alias ll='exa --long --icons'
+alias la='exa --long --all --icons'
 alias lst='exa --tree'
 alias vim='nvim'
 alias find='fd'
+alias z='zoxide'
 
 # Environment
 export EDITOR=nvim
@@ -84,6 +85,9 @@ starship init fish | source
 # Direnv
 direnv hook fish | source
 
+# Zoxide
+zoxide init fish | source
+
 # Local utilities
 set PATH $HOME/.bin $PATH
 
@@ -94,3 +98,6 @@ export GOPATH=$HOME/go
 # Rust
 set PATH $HOME/.cargo/bin/ $PATH
 
+# VS Code
+string match -q "$TERM_PROGRAM" "vscode"
+and . (code --locate-shell-integration-path fish)

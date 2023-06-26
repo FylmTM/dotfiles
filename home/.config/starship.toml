@@ -1,3 +1,9 @@
+command_timeout=200
+
+[cmd_duration]
+min_time=1000
+show_milliseconds=false
+
 [aws]
 disabled=true
 
@@ -7,6 +13,20 @@ disabled=true
 [package]
 disabled=true
 
-[cmd_duration]
-min_time=1000
-show_milliseconds=false
+[nodejs]
+disabled=true
+
+[python]
+disabled=true
+
+[cmake]
+disabled=true
+
+[java]
+disabled=true
+
+[php]
+disabled=true
+
+[docker_context]
+disabled=true
