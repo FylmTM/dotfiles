@@ -20,4 +20,5 @@ procs
 ripgrep
 starship
 tokei
+zoxide
 watch
