@@ -90,6 +90,8 @@ zoxide init fish | source
 
 # Local utilities
 set PATH $HOME/.bin $PATH
+set PATH /usr/local/bin $PATH
+export LIBRARY_PATH="$LIBRARY_PATH:$(brew --prefix)/lib"
 
 # Golang
 set PATH $HOME/go/bin $PATH

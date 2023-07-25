@@ -19,6 +19,8 @@ prettyping
 procs
 ripgrep
 starship
+stats
 tokei
 zoxide
+visual-studio-code
 watch
