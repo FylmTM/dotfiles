@@ -1,0 +1,18 @@
+{
+    "autoEnabledSmartMode": true,
+    "restoreWorkspacesOnStartup": false,
+    "editor.fontSize": 14.0,
+    "zoomLevel": 1.2,
+    "editor.ligatures": false,
+    "editor.renderWhitespace": "All",
+    "editor.previewTab": false,
+    "editor.guides": [
+        120
+    ],
+    "editor.honorCamelHumps": true,
+    "terminal.copyOnSelection": true,
+    "editor.showCodeVision": false,
+    "files.toggleFolderMode": "singleClick",
+    "theme": "dark",
+    "editor.semanticHighlighting": true
+}
