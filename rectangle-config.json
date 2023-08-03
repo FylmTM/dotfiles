@@ -77,7 +77,7 @@
       "float" : 0
     },
     "hideMenubarIcon" : {
-      "bool" : false
+      "bool" : true
     },
     "ignoredSnapAreas" : {
       "int" : 0
