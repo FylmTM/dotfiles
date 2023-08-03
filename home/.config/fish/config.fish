@@ -48,7 +48,6 @@ alias z='zoxide'
 
 # Environment
 export EDITOR=nvim
-export BROWSER=google-chrome-stable
 
 # Kubernetes
 function kubectl-set-namespace
@@ -63,11 +62,6 @@ function docker-stop-all --description 'Stop and remove all Docker container'
     docker rm (docker ps -a -q)
     echo 'Done!'
     docker ps -a -q
-end
-
-# Go to project
-function p --description 'Jump to project'
-    cd $HOME/work/(find $HOME/work -maxdepth 5 -type f -name '.project' -printf "%h\n" | sed "s|$HOME/workspace/||g" | fzf --height 10 --border)
 end
 
 # Helpers
@@ -89,9 +83,9 @@ direnv hook fish | source
 zoxide init fish | source
 
 # Local utilities
-set PATH $HOME/.bin $PATH
-set PATH /usr/local/bin $PATH
-set PATH /Users/dmitryvrublevsky/Library/Application\ Support/JetBrains/Toolbox/scripts $PATH
+set PATH $HOME/.bin /opt/homebrew/bin /opt/homebrew/sbin /usr/local/bin $PATH
+set PATH "$HOME/Library/Application Support/JetBrains/Toolbox/scripts" $PATH
+
 export LIBRARY_PATH="$LIBRARY_PATH:$(brew --prefix)/lib"
 
 # Golang
