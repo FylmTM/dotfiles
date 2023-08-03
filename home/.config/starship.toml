@@ -30,3 +30,6 @@ disabled=true
 
 [docker_context]
 disabled=true
+
+[gradle]
+disabled=true

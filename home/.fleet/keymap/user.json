@@ -1,0 +1,64 @@
+{
+  "keymap": [
+    {
+      "key": "cmd-backslash",
+      "trigger": "-debug/resume"
+    },
+    {
+      "key": "cmd-shift-backslash",
+      "trigger": "-debug/stop"
+    },
+    {
+      "key": "cmd-backslash",
+      "trigger": "two-columns-layout"
+    },
+    {
+      "key": "cmd-left",
+      "trigger": "-home"
+    },
+    {
+      "key": "cmd-right",
+      "trigger": "-end"
+    },
+    {
+      "key": "cmd-left",
+      "trigger": "focus-first-split"
+    },
+    {
+      "key": "cmd-right",
+      "trigger": "focus-second-splits"
+    },
+    {
+      "key": "ctrl-alt-cmd-backslash",
+      "trigger": "workspace-tree/show-in-files"
+    },
+    {
+      "key": "cmd-d",
+      "trigger": "-select-next-occurrence"
+    },
+    {
+      "key": "cmd-shift-d",
+      "trigger": "-unselect-occurrence"
+    },
+    {
+      "key": "cmd-d",
+      "trigger": "duplicate-line"
+    },
+    {
+      "key": "alt-cmd-l",
+      "trigger": "reformat-code"
+    },
+    {
+      "key": "cmd-e",
+      "trigger": "-next-error"
+    },
+    {
+      "key": "cmd-shift-e",
+      "trigger": "-prev-error"
+    },
+    {
+      "key": "cmd-e",
+      "trigger": "show-recent-files-panel"
+    }
+  ]
+}

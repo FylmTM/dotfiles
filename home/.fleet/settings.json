@@ -9,10 +9,26 @@
     "editor.guides": [
         120
     ],
-    "editor.honorCamelHumps": true,
+    "editor.honorCamelHumps": false,
     "terminal.copyOnSelection": true,
     "editor.showCodeVision": false,
     "files.toggleFolderMode": "singleClick",
     "theme": "dark",
-    "editor.semanticHighlighting": true
+    "editor.semanticHighlighting": true,
+    "keymap": "macos-ij",
+    "editor.showTabs": false,
+    "editor.tabLimit": 1,
+    "terminal.profiles": [
+        {
+            "name": "fish",
+            "program": "/opt/homebrew/bin/fish",
+        }
+    ],
+    "java.runtimes": [
+        {
+            "path": "/Users/dmitryvrublevsky/tools/jvm/jdk-17.0.8+7/Contents/Home",
+            "name": "temurin-17"
+        }
+    ],
+    "editor.formatOnSave": false
 }

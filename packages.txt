@@ -13,10 +13,14 @@ git-lfs
 htop
 helm
 jetbrains-toolbox
+kubectl
+llvm
 neovim
 node
+orbstack
 prettyping
 procs
+pkg-config
 ripgrep
 starship
 stats

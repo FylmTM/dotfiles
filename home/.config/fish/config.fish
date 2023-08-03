@@ -91,6 +91,7 @@ zoxide init fish | source
 # Local utilities
 set PATH $HOME/.bin $PATH
 set PATH /usr/local/bin $PATH
+set PATH /Users/dmitryvrublevsky/Library/Application\ Support/JetBrains/Toolbox/scripts $PATH
 export LIBRARY_PATH="$LIBRARY_PATH:$(brew --prefix)/lib"
 
 # Golang
