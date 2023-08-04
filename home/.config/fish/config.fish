@@ -73,6 +73,12 @@ end
 # register completions (on-the-fly, non-cached, because the actual command won't be cached anyway
 complete -c cheat -xa '(curl -s cheat.sh/:list)'
 
+# Local utilities
+set PATH $HOME/.bin /opt/homebrew/bin /opt/homebrew/sbin /usr/local/bin $PATH
+set PATH "$HOME/Library/Application Support/JetBrains/Toolbox/scripts" $PATH
+
+export LIBRARY_PATH="$LIBRARY_PATH:$(brew --prefix)/lib"
+
 # Prompt
 starship init fish | source
 
@@ -81,12 +87,6 @@ direnv hook fish | source
 
 # Zoxide
 zoxide init fish | source
-
-# Local utilities
-set PATH $HOME/.bin /opt/homebrew/bin /opt/homebrew/sbin /usr/local/bin $PATH
-set PATH "$HOME/Library/Application Support/JetBrains/Toolbox/scripts" $PATH
-
-export LIBRARY_PATH="$LIBRARY_PATH:$(brew --prefix)/lib"
 
 # Golang
 set PATH $HOME/go/bin $PATH
