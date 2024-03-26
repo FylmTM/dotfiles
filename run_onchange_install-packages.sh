@@ -1,4 +1,5 @@
 #!/bin/sh
+brew tap homebrew/cask-fonts
 
 brew install \
     awscli \
@@ -6,6 +7,8 @@ brew install \
     direnv \
     deno \
     dos2unix \
+    enpass \
+    entr \
     fd \
     fish \
     fzf \
@@ -16,6 +19,7 @@ brew install \
     helm \
     iterm2 \
     jetbrains-toolbox \
+    jq \
     kubectl \
     llvm \
     lsd \
@@ -34,4 +38,5 @@ brew install \
     visual-studio-code \
     watch \
     oven-sh/bun/bun \
+    homebrew/cask-fonts/font-hack-nerd-font \
 && echo "Done!"
