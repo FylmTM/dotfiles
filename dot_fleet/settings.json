@@ -1,0 +1,37 @@
+{
+    "autoEnabledSmartMode": true,
+    "restoreWorkspacesOnStartup": false,
+    "editor.fontSize": 14.0,
+    "zoomLevel": 1.2,
+    "editor.ligatures": false,
+    "editor.renderWhitespace": "All",
+    "editor.previewTab": false,
+    "editor.guides": [
+        120
+    ],
+    "editor.honorCamelHumps": false,
+    "terminal.copyOnSelection": true,
+    "editor.showCodeVision": false,
+    "files.toggleFolderMode": "singleClick",
+    "theme": "dark_purple",
+    "editor.semanticHighlighting": true,
+    "keymap": "macos",
+    "editor.showTabs": false,
+    "editor.tabLimit": 1,
+    "terminal.profiles": [
+        {
+            "name": "fish",
+            "program": "/opt/homebrew/bin/fish",
+        }
+    ],
+    "java.runtimes": [
+        {
+            "path": "/Users/dmitryvrublevsky/tools/jvm/jdk-17.0.8+7/Contents/Home",
+            "name": "temurin-17"
+        }
+    ],
+    "editor.formatOnSave": true,
+    "editor.showInlayHints": false,
+    "editor.showFileDetails": true,
+    "editor.showNavBar": true
+}

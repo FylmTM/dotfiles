@@ -1,0 +1,61 @@
+[core]
+    excludesfile = ~/.gitignore_global
+    autocrlf = input
+    safecrlf = true
+    commentChar = "#"
+[user]
+    name = Dmitry Vrublevsky
+    email = {{ .email | quote }}
+[color]
+    ui = true
+[push]
+    default = current
+[credential]
+    helper = cache --timeout=28800
+[gui]
+    encoding = utf-8
+[alias]
+    showaliases = config --get-regexp alias
+    review = push origin HEAD:refs/for/master
+    amend = commit --amend --no-edit --date=now
+    last = log -n1
+[color "branch"]
+    current = yellow reverse
+    local = yellow
+    remote = green
+[color "diff"]
+    meta = yellow bold
+    frag = magenta bold
+    old = red bold
+    new = green bold
+[color "status"]
+    added = yellow
+    changed = green
+    untracked = cyan
+[pager]
+    diff = delta
+    log = delta
+    reflog = delta
+    show = delta
+[delta]
+    line-numbers = true
+    side-by-side = false
+    plus-style = "syntax #012800"
+    minus-style = "syntax #340001"
+    syntax-theme = Monokai Extended
+    navigate = false
+[interactive]
+    diffFilter = delta --color-only
+[merge]
+    ff = only
+[pull]
+    ff = only
+[fetch]
+    prune = true
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+[init]
+	defaultBranch = main
