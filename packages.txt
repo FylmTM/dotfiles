@@ -3,7 +3,6 @@ bat
 direnv
 deno
 dos2unix
-exa
 fd
 fish
 fzf
@@ -15,6 +14,7 @@ helm
 jetbrains-toolbox
 kubectl
 llvm
+lsd
 neovim
 node
 orbstack

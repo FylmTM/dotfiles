@@ -38,10 +38,11 @@ alias gunwip='git log -n 1 | grep -q -c "\-\-wip\-\-"; and git reset HEAD~1'
 alias cat='bat --style=header'
 alias ping='prettyping --nolegend'
 alias top='htop'
-alias ls='exa'
-alias ll='exa --long --icons'
-alias la='exa --long --all --icons'
-alias lst='exa --tree'
+alias ls='lsd'
+alias l='ls -l'
+alias la='ls -a'
+alias lla='ls -la'
+alias lt='ls --tree'
 alias vim='nvim'
 alias find='fd'
 alias z='zoxide'
@@ -74,7 +75,7 @@ end
 complete -c cheat -xa '(curl -s cheat.sh/:list)'
 
 # Local utilities
-set PATH $HOME/.bin /opt/homebrew/bin /opt/homebrew/sbin /usr/local/bin $PATH
+set PATH $HOME/.bin $HOME/.bun/bin /opt/homebrew/bin /opt/homebrew/sbin /usr/local/bin $PATH
 set PATH "$HOME/Library/Application Support/JetBrains/Toolbox/scripts" $PATH
 
 export LIBRARY_PATH="$LIBRARY_PATH:$(brew --prefix)/lib"
