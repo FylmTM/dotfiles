@@ -37,6 +37,7 @@ brew install \
     zoxide \
     visual-studio-code \
     watch \
+    wezterm \
     oven-sh/bun/bun \
     homebrew/cask-fonts/font-hack-nerd-font \
 && echo "Done!"
