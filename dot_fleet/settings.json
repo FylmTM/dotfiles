@@ -15,7 +15,7 @@
     "files.toggleFolderMode": "singleClick",
     "theme": "dark_purple",
     "editor.semanticHighlighting": true,
-    "keymap": "macos",
+    "keymap": "fleet",
     "editor.showTabs": false,
     "editor.tabLimit": 1,
     "terminal.profiles": [

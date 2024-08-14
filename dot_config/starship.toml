@@ -17,7 +17,7 @@ disabled=true
 disabled=true
 
 [python]
-disabled=true
+disabled=false
 
 [cmake]
 disabled=true

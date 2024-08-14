@@ -19,5 +19,7 @@ npm-debug.log
 .project
 target/
 .donotcommit/
+..donotcommit/
 .cargo-ok
 .fleet/
+venv
