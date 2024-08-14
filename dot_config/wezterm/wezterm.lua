@@ -2,8 +2,7 @@ local wezterm = require 'wezterm'
 
 local config = wezterm.config_builder()
 
---config.color_scheme = 'Material Darker (base16)'
-config.color_scheme = 'Galizur'
+config.color_scheme = 'Dracula+'
 config.default_prog = { '/opt/homebrew/bin/fish', '-l' }
 
 config.font_size = 16
