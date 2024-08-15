@@ -15,6 +15,7 @@ brew install \
     fnm \
     git-delta \
     git-lfs \
+    hammerspoon \
     htop \
     helm \
     iterm2 \
