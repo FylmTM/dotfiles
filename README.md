@@ -2,9 +2,11 @@
 
 Config:
 ```
-# ~/.config/chezmoi/chezmoi.toml
+[diff]
+exclude=["scripts"]
+
 [data]
-email="dmitry@vrublevsky.me"
+email="dmitry.v@gravityteam.co"
 ```
 
 Setup:
