@@ -41,6 +41,7 @@ alias find='fd'
 alias z='zoxide'
 
 # Environment
+export SHELL=/opt/homebrew/bin/fish
 export EDITOR=nvim
 
 # Kubernetes

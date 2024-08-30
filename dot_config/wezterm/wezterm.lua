@@ -18,6 +18,26 @@ config.keys = {
     mods = 'CMD|SHIFT',
     action = wezterm.action.SplitVertical { domain = 'CurrentPaneDomain' },
   },
+  {
+    key = 'LeftArrow',
+    mods = 'CMD',
+    action = wezterm.action.ActivatePaneDirection 'Left',
+  },
+  {
+    key = 'RightArrow',
+    mods = 'CMD',
+    action = wezterm.action.ActivatePaneDirection 'Right',
+  },
+  {
+    key = 'UpArrow',
+    mods = 'CMD',
+    action = wezterm.action.ActivatePaneDirection 'Up',
+  },
+  {
+    key = 'DownArrow',
+    mods = 'CMD',
+    action = wezterm.action.ActivatePaneDirection 'Down',
+  },
 }
 
 config.use_fancy_tab_bar = true

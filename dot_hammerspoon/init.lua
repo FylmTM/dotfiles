@@ -14,7 +14,7 @@ hs.hotkey.bind({ "ctrl" }, "§", function()
 			f.y = max.y
 			f.w = max.w - 140
 			f.h = max.h * 0.8
-			hs.timer.doAfter(0.1, function()
+			hs.timer.doAfter(0.2, function()
 				wez_window:setFrame(f)
 			end)
 			wez_window:focus()
