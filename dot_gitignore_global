@@ -23,3 +23,4 @@ target/
 .cargo-ok
 .fleet/
 venv
+.DS_Store
