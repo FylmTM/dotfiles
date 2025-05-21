@@ -43,7 +43,6 @@ filetype plugin indent on      " Indent and plugins by filetype
         set noundofile
     " Encoding
         set encoding=utf-8
-        set termencoding=utf-8
         set fileencodings=utf8,cp1251
     " Interface
         set title               " Set title of the window to filename [+=-] (path) - VIM

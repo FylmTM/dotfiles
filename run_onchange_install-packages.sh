@@ -1,6 +1,4 @@
 #!/bin/sh
-brew tap homebrew/cask-fonts
-
 brew install \
     awscli \
     bat \
@@ -18,7 +16,6 @@ brew install \
     hammerspoon \
     htop \
     helm \
-    iterm2 \
     jetbrains-toolbox \
     jq \
     kubectl \
@@ -40,5 +37,5 @@ brew install \
     watch \
     wezterm \
     oven-sh/bun/bun \
-    homebrew/cask-fonts/font-hack-nerd-font \
+    font-hack-nerd-font \
 && echo "Done!"
