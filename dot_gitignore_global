@@ -24,3 +24,6 @@ target/
 .fleet/
 venv
 .DS_Store
+.dev
+.cursor
+.aider*

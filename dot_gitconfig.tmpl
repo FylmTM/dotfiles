@@ -9,9 +9,16 @@
 [color]
     ui = true
 [push]
-    default = current
+    default = simple
+    autoSetupRemote = true
 [credential]
     helper = cache --timeout=28800
+[column]
+    ui=auto
+[tag]
+    sort=version:refname
+[branch]
+    sort=-committerdate
 [gui]
     encoding = utf-8
 [alias]
@@ -52,11 +59,20 @@
     ff = only
 [fetch]
     prune = true
+    pruneTags = true
+    all = true
 [filter "lfs"]
-	clean = git-lfs clean -- %f
-	smudge = git-lfs smudge -- %f
-	process = git-lfs filter-process
-	required = true
+    clean = git-lfs clean -- %f
+    smudge = git-lfs smudge -- %f
+    process = git-lfs filter-process
+    required = true
 [init]
-	defaultBranch = main
+    defaultBranch = main
+[diff]
+    algorithm = histogram
+    colorMoved = plain
+    mnemonicPrefix = true
+    renames = true
+[commit]
+    verbose = true
 

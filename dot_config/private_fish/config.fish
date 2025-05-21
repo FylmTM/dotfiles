@@ -87,3 +87,4 @@ set PATH $HOME/.cargo/bin/ $PATH
 # VS Code
 string match -q "$TERM_PROGRAM" "vscode"
 and . (code --locate-shell-integration-path fish)
+
