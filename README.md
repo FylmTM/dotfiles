@@ -1,6 +1,6 @@
 # Dotfiles
 
-Config:
+Config (`~/.config/chezmoi/chezmoi.toml`):
 ```
 [diff]
 exclude=["scripts"]
@@ -12,7 +12,7 @@ email="dmitry.v@gravityteam.co"
 Setup:
 
 ```shell
-chezmoi init --apply --verbose https://github.com/FylmTM/dotfiles.git
+chezmoi init --apply --verbose git@github.com:FylmTM/dotfiles.git
 ```
 
 Check changes:
