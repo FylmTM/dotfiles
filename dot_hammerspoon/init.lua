@@ -83,3 +83,4 @@ end
 
 -- call binder with Full Qualified Name of WezTerm and Escape key
 bindHotkey("com.github.wez.wezterm", "§")
+bindHotkey("com.github.wez.wezterm", "`")

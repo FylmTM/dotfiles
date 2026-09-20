@@ -27,3 +27,5 @@ venv
 .dev
 .cursor
 .aider*
+CLAUDE.local.md
+settings.local.json

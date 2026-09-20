@@ -9,6 +9,11 @@ config.font_size = 16
 
 config.keys = {
   {
+    key = 'w',
+    mods = 'CMD|SHIFT',
+    action = wezterm.action.CloseCurrentPane { confirm = false },
+  },
+  {
     key = '\\',
     mods = 'CMD',
     action = wezterm.action.SplitHorizontal { domain = 'CurrentPaneDomain' },

@@ -63,7 +63,7 @@ end
 alias w1 'watch -n 1'
 
 # Local utilities
-set PATH $HOME/.bin $HOME/.bun/bin /opt/homebrew/bin /opt/homebrew/sbin /usr/local/bin $PATH
+set PATH $HOME/.bin $HOME/.local/bin $HOME/.bun/bin /opt/homebrew/bin /opt/homebrew/sbin /usr/local/bin $PATH
 set PATH "$HOME/Library/Application Support/JetBrains/Toolbox/scripts" $PATH
 
 export LIBRARY_PATH="$LIBRARY_PATH:$(brew --prefix)/lib"
